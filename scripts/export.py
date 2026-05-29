@@ -19,7 +19,7 @@ def export():
     export_path = os.path.join(pdf_dir, export_name)
     
     shutil.copy(book_pdf, export_path)
-    print(f"✅ Versión exportada con éxito como: {export_path}")
+    print(f"[OK] Version exportada con exito como: {export_path}")
 
 if __name__ == "__main__":
     export()

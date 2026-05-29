@@ -89,7 +89,7 @@ def compile_book(chapter=None, engine="pdflatex"):
         dest_filename = f"libro_completo.pdf" if chapter is None else f"libro_capitulo_{chapter:02d}.pdf"
         dest_pdf = os.path.join(pdf_out_dir, dest_filename)
         shutil.copy(src_pdf, dest_pdf)
-        print(f"🎉 ¡Compilación terminada con éxito! PDF exportado a: {dest_pdf}")
+        print(f"[OK] Compilacion terminada con exito! PDF exportado a: {dest_pdf}")
         return True
     else:
         print("Error: No se generó el PDF de salida en el directorio temporal.")
