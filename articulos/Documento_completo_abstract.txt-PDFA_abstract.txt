@@ -1,0 +1,231 @@
+--- PAGINA 1 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+DISEÑO, DESARROLLO Y ANÁLISIS TÉRMICO DE UN COLECTO R SOLAR DE AIRE  
+CON PLACA PLANA. EFICIENCIA Y EXERGÍA PERDIDA.   
+ 
+ 
+Lema A.I., Pontin M.I., Morsetto J.M. y Ruetsch L.G. 
+Universidad Nacional de Río Cuarto - Facultad de Ingeniería 
+ Ruta Nacional 36 Km. 601, (5800) Río Cuarto – Córdoba, Argentina  
+Tel. +54 (358) 467 6485 - Fax +54 (358) 467 6246 .  E-mail alema@ing.unrc.edu.ar 
+ 
+ 
+RESUMEN.  En este trabajo se describe el diseño y construcci ón de un colector solar plano de aire, como así tam bién el 
+desarrollo de los ensayos para determinar el compor tamiento térmico de acuerdo con las normas ANSI/ASH RAE standard 
+93-2003 para ensayos al aire libre.  En los colectores de aire, debido al bajo número de  Prandtl, la eficiencia resulta 
+practicamente determinada por el flujo de aire que circula dentro del colector, por lo tanto la realiz ación de los test requieren 
+evaluar de manera precisa el caudal másico de aire a la entrada y a la salida del colector, con este p ropósito, se diseñaron 
+accesorios que se incorporaron al colector. Se pres entan curvas de eficiencia térmica y un análisis de  exergía, a través de los 
+cuales se evalúa el desempeño térmico y exergético. Se obtienen además, parámetros característicos del colector: rendimiento 
+óptico FR(τα) y factor de pérdidas de calor FRUL.  
+ 
+Palabras clave: Colector solar de placa plana, rendimiento instantáneo, pérdidas exergéticas. 
+ 
+INTRODUCCIÓN  
+ 
+En aplicaciones térmicas, donde es necesario aire c aliente o templado, el uso de colectores solares de  aire es una alternativa 
+viable y constituye una tecnología prometedora en e l uso activo de la energía solar para aplicaciones de calefacción en 
+general (Choundhury et al., 1988).  A diferencia de los sistemas solares de líquido, su ingreso en el m ercado es limitado y la 
+falta de información genera el principal obstáculo para una amplia difusión de estos sistemas solares (Rojas et al., 2008). 
+ 
+El posible usuario necesita parámetros confiables q ue le permitan decidir realizar la inversión necesa ria y aplicar esta 
+tecnología, y sería un error considerar sólo el asp ecto del costo en el diseño o selección de un colec tor solar (Kurtbas et al., 
+2004). Además, los costos de funcionamiento produce n un incremento de los costos totales durante la vi da útil del colector 
+solar, siendo el aumento de la eficiencia y la disminución de las pérdidas de exergía, la manera más eficaz de ahorrar energía. 
+ 
+La eficiencia energética de un colector es la relac ión entre el calor extraído y la energía solar disp onible. El aire tiene, en 
+comparación con el agua o los líquidos orgánicos, p ropiedades termodinámicas y de transporte pobres en  términos de 
+transferencia de calor y la eficiencia de los colec tores solares de aire es naturalmente baja. Por est a razón, mejorar su 
+rendimiento es un propósito prioritario (Ion and Martins, 2006). 
+ 
+En los últimos años, se ha profundizado el estudio de mejoras en el rendimiento de los colectores sola res de aire (Choudhury 
+y Garg, 1993), (Parker et al., 1993), (Ion y Martin s, 2006), (Rojas et al., 2008) y la mayoría de los métodos propuestos 
+mejoran la eficiencia, incrementando el coeficiente de transferencia de calor desde la placa absorbedo ra a la corriente de aire, 
+a través del aumento de la velocidad del fluido.  
+ 
+El rendimiento energético de un colector solar es m uy importante, pero no constituye un criterio sufic iente para la eficiencia 
+del colector solar de placa plana, ya que la ecuaci ón de la energía por sí sola no encuentra las pérdi das internas (Dutta Gupta 
+y Saha, 1990; Luminosu  y  Fara,  2005). Las pérdid as de exergía permiten identificar las desviaciones  de la idealidad de un 
+sistema.  
+ 
+El análisis de exergía en un proceso térmico, es un método usado para establecer pautas para el diseño y operación del mismo 
+y permite conocer la degradación energética que pos ee el sistema (Torres et al., 1996). Es útil para e stablecer estrategias que 
+permitan optimizar la utilización de la energía, en  función de las variables de ajuste. En este sentid o, se define una eficiencia 
+de la segundad ley, ηII , como la relación entre la eficiencia térmica real  y la máxima eficiencia térmica posible (reversible ) 
+bajo las mismas condiciones (Gómez Ribelles et al., 1990).  
+ 
+En el presente trabajo, se propone evaluar térmicam ente, a través de la eficiencia y mediante un análi sis de pérdidas 
+exergéticas, un colector de aire de placa plana, di señado previamente y construido con materiales disp onibles en el mercado 
+local. El procedimiento de medida de la eficiencia térmica para el caso de colectores solares de aire,  implica una mayor 
+dificultad  por ser el aire un fluido compresible, lo cual introdujo la necesidad de diseñar accesorio s al colector, de modo de 
+poder cuantificar de manera precisa el caudal másic o, dado que el rendimiento térmico de los colectore s solares de aire 
+depende del flujo de masa a través del colector. 
+              ASADES  
+Avances en Energías Renovables y Medio Ambiente 
+Vol. 15,  2011.  Impreso en la Argentina.  ISSN  0329-5184 
+02.15 
+--- PAGINA 2 ---
+ 
+La experimentación se realizó en concordancia con l as normas ANSI/ASHRAE standard 93-2003, para ensayo s en el 
+exterior. Se describen los procedimientos para el cálculo de la curva de eficiencia energética y de las pérdidas de exergía para 
+el colector solar analizado, operando en sistema de lazo cerrado, con presión positiva, en estado estacionario y al aire libre.  
+ 
+DESARROLLO DEL TRABAJO 
+ 
+En esta sección, se hace una descripción del diseño  y construcción de un colector solar de placa plana  que forma parte de un 
+sistema de secado solar, como así también se descri ben los accesorios incorporados, de modo de poder r ealizar la  
+experimentación de acuerdo a la norma ASHRAE 93-200 3 para colectores de aire. Se presenta la formulaci ón matemática 
+utilizada para calcular la Eficiencia térmica y las Pérdidas de exergía.   
+ 
+Diseño y características constructivas del sistema solar y los accesorios incorporados 
+ 
+El colector solar de aire, forma parte de un sistema de secado solar  (figura 1a) que se diseñó conjuntamente con la cámara de 
+secado. La superficie absorbedora es una chapa de z inc, pintada de negro mate y la cubierta, es de vid rio transparente de 5 
+mm de espesor. Entre ambas superficies, se forma el  canal de flujo de aire, que tiene una sección tran sversal de 0,90 m de 
+ancho y 0,15
+ m de altura. La parte exterior del colector, es un recinto de chapa galvanizada, aislado térmicamente en los 
+laterales, con poliestireno expandido y la aislació n del fondo es una combinación de poliestireno expa ndido de alta densidad 
+y aire estanco (figura 1b).  
+ 
+El sistema de secado se encuentra emplazado en el c ampus de la Universidad Nacional de Río Cuarto, espec íficamente en el 
+predio del Laboratorio del Grupo de Energía Solar. De acuerdo a la latitud de la ciudad de Río Cuarto (3 3° 04’ S) y 
+pretendiendo una orientación más favorable para el invierno, el colector solar se montó mirando hacia el norte con una 
+inclinación de 45°, sobre una estructura de caño de  acero de 30 mm x 30 mm de sección y de 1.2 mm de e spesor. La cabina 
+de secado, está ubicada a continuación del colector , es de chapa galvanizada, recubierta interiormente  por poliestireno 
+expandido de 5 cm de espesor.  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 1a. Sistema  ensayado Figura 1b. Sección tra nsversal del colector 
+ 
+ 
+En el modo normal de funcionamiento, el aire que circula por el colector solar,  proviene de un ventilador centrífugo de 1 HP. 
+A los fines de la realización de las experiencias, antes de ingresar al colector, el aire atraviesa un a cámara de calefacción, 
+comandada por un controlador de temperaturas Novus N1100. De este modo, el controlador permite selecci onar una 
+temperatura para el aire a la entrada del colector en el valor deseado y mantener su valor constante, mientras que el caudal 
+másico se regula modificando la apertura del área de succión del ventilador.  
+ 
+Al abandonar el recinto de calefacción el aire es conducido al colector a través de un acople tipo cónico, que conecta la salida 
+del recinto calefactor (sección circular de 0.11 m de diámetro) con la entrada del colector (sección  rectangular de 0.9 m x 
+0.15 m). El aire se distribuye uniformemente al int erceptar en su paso, un deflector de flujo y una pl aca perforada de 
+distribución, ubicada a la salida del acople, tal como se muestra en la figura 2a.  
+ 
+ 
+ 
+ 
+Superficie transparente 
+Ventilador 
+Cámara de calefacción 
+Controlador de temperaturas 
+Novus N1100 
+Cámara de secado 
+Superficie absorbedora 
+Poliestireno expandido  
+Aire estanco  
+Flujo de aire 
+02.16 
+--- PAGINA 3 ---
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 2a. Ingreso del flujo de aire al colector Fi gura 2b. Placa de distribución de flujo 
+ 
+En la figura 3a, se observa el dispositivo cónico ubicado a la salida del colector, que obliga al aire que abandona el colector, a 
+circular a través de un tubo de 11 cm de diámetro (figura 3b).  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Figura 3a. Dispositivo cónico a la salida del colector           Figura 3b. Detalle del acople a la sa lida del colector 
+ 
+ 
+Desarrollo de las experiencias 
+ 
+El rendimiento de la mayoría de los colectores es p articularmente sensible a los niveles de radiación térmica, por eso el 
+colector se ubicó al aire libre de modo que la temp eratura de las superficies cercanas al colector estén lo más cerca posible de 
+la temperatura ambiente.  
+ 
+Los datos de temperatura y radiación fueron registr ados cada 10 segundos mediante un adquisidor de dat os “Agilent”. Se 
+utilizaron termocuplas tipo T (cobre-constantán)  p ara medir las temperaturas y  dos solarímetros foto voltaicos ubicados uno 
+en posición horizontal, y otro sobre el plano incli nado del colector. Las termocuplas se protegieron e n todos los casos de la 
+radiación solar directa y se distribuyeron uniforme mente, cinco en la sección transversal a la entrada  del colector y cinco a la 
+salida, dos registrando la temperatura ambiente, cu atro soldadas a superficie absorbedora, una en el a ire estanco de la 
+aislación, una en la sección circular a la salida d el recinto de calefacción y otra en la sección circ ular del anexo cónico a la 
+salida del colector.  
+ 
+Los parámetros ambientales como Humedad Relativa Amb iente, Velocidad y Dirección del Viento, fueron reg istrados 
+mediante una Estación Meteorológica Inalámbrica Portátil Pegasus.  
+ 
+El flujo másico del aire que circula a través del c olector, se calculó tomando el promedio de los fluj os másicos en dos puntos 
+diferentes, uno de ellos, en la sección circular de l cono de ingreso del aire al colector (figura 2a),  y el otro, en la sección 
+circular del cono de egreso del aire a la salida de l colector (figura 3a y 3b). En cada uno de los pun tos, se midió la velocidad 
+mediante un medidor de flujo de paletas marca Prova  AVM07, se calculó el área de flujo y la densidad c omo función de la 
+temperatura, de este modo el caudal másico 
+m& , se calculó como: 
+ 
+fm A v = ρ &  (1) 
+ 
+ 
+ 
+Punto de registro de 
+la velocidad del aire 
+Punto de registro de 
+la velocidad del aire 
+Punto de registro de 
+la velocidad del aire  
+02.17 

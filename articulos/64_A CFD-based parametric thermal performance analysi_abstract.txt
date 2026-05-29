@@ -1,0 +1,249 @@
+--- PAGINA 1 ---
+energies
+Article
+A CFD-Based Parametric Thermal Performance Analysis of
+Supply Air Ventilated Windows
+Shiva Najaf Khosravi *
+ and Ardeshir Mahdavi
+/gid00030/gid00035/gid00032/gid00030/gid00038/gid00001/gid00033/gid00042/gid00045/gid00001
+/gid00048/gid00043/gid00031/gid00028/gid00047/gid00032/gid00046
+Citation: Najaf Khosravi, S.;
+Mahdavi, A. A CFD-Based
+Parametric Thermal Performance
+Analysis of Supply Air Ventilated
+Windows. Energies 2021, 14, 2420.
+https://doi.org/10.3390/en14092420
+Academic Editor: Rajender Gupta
+Received: 2 March 2021
+Accepted: 21 April 2021
+Published: 23 April 2021
+Publisher’s Note: MDPI stays neutral
+with regard to jurisdictional claims in
+published maps and institutional afﬁl-
+iations.
+Copyright: © 2021 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+Department of Building Physics and Building Ecology, Vienna University of Technology, 1040 Vienna, Austria;
+amahdavi@tuwien.ac.at
+* Correspondence: shiva.khosravi@tuwien.ac.at
+Abstract: Ventilated windows have the potential to contribute to both indoor air quality and energy
+efﬁciency in cold climates. A typical ventilated window functions as a solar collector under inward air
+ﬂow direction and incident solar radiation. The ventilated window is a modiﬁcation of the multiple
+pane windows in which air is drawn in from outside and is heated through conduction, convection,
+and radiation in the cavity. In this study, a detailed parametric analysis was conducted to investigate
+the thermal performance of ventilated windows and their capacity to preheat ventilation air. High-
+resolution 3D steady RANS computational ﬂuid dynamic (CFD) simulations were performed for six
+ventilated window geometries. Model results were compared with measurements. The following
+geometric characteristics were evaluated in detail: (i) The height of the window, (ii) the width of
+the cavity, (iii) the location of double-layered glazing, and (iv) the width of the supply air opening.
+The results suggested that taller cavities and a smaller cavity depth can provide higher incoming air
+temperature. Windows with inner double-layered glazing and a smaller width of supply air opening
+displayed a better thermal performance.
+Keywords: ventilated window; energy performance; heat transfer; optimal design
+1. Introduction
+Windows represent essential elements of buildings’ envelope. Given their higher
+thermal transmittance, improving their thermal behavior has been a persistent subject of
+interest [1]. Different approaches to energy-efﬁcient glazing systems are still debated among
+scientists [2,3]. Optimum glazing is expected to allow for high solar gains and low heat loss
+in winter. Windows are also expected to facilitate sufﬁcient air change rates [4]. To achieve
+these attributes, various transparent building components have been developed, including
+ventilated windows [5]. These type of windows have received increasing attention since
+their introduction in Northern Europe [ 6]. As the name implies, the main difference
+between conventional windows and ventilated windows is the existence of free or forced
+convection in the interstitial cavity between the window’s layers. In certain instances,
+operable vents positioned at the top and bottom of the frames enable, depending on the
+operation mode, the ﬂow of air in the cavity [7].
+The ﬁve main operation modes of a ventilated window are schematically illustrated
+in Figure 1. These are referred to here as supply (i), exhaust (ii), indoor air curtain (iii),
+outdoor air curtain (iv), and insulation mode (vi) [8,9]. The appropriate ventilated window
+conﬁguration depends on the method of operation as well as the climatic circumstances.
+For instance, a high supply air temperature to the indoor space in the cold season would
+be desirable [ 10]. Ventilated windows, which could be in principle deployed both in
+new and old buildings, have the potential to provide preheated ventilation air during the
+wintertime [11–13]. The supply air window is a modiﬁcation of the multiple pane windows
+in which air is pulled in from outside then is heated through convection, conduction, and
+radiation within the cavity [12,14]. Solar radiation, absorbed by the louvers and glazing
+panels converts into heat, which is carried both to the interior and exterior space via
+Energies 2021, 14, 2420. https://doi.org/10.3390/en14092420 https://www.mdpi.com/journal/energies
+--- PAGINA 2 ---
+Energies 2021, 14, 2420 2 of 20
+conduction, long-wave radiation, and convection. Moreover, convection due to wind
+and buoyancy contributes to heat transfer between glazing panes [ 15]. The design and
+operation of ventilated windows must take a number of challenges into consideration.
+Open cavities raise issues such as security, acoustics, air quality, cleaning and maintenance,
+and condensation [16]. If falling below the dew point temperature, low surface temperature
+of glass panes may trigger condensation risk [8].
+Energies 2021, 14, 2420 2 of 20 
+ 
+ 
+by the louvers and glazing panels converts into heat, which is carried both to the interior 
+and exterior space via conduction, long-wave radiation, and convection. Moreover, 
+convection due to wind and buoyancy contributes to heat transfer between glazing panes 
+[15]. The design and operation of ventilated windows must take a number of challenges 
+into consideration. Open cavities raise issues such as security, acoustics, air quality, 
+cleaning and maintenance, and condensation [16]. If falling below the dew point 
+temperature, low surface temperature of glass panes may trigger condensation risk [8]. 
+ 
+Figure 1. Schematic illustration of the principle operation modes of a ventilated window. Adapted 
+from [8,9]. i: Supply, exhaust ii: exhaust, indoor air curtain iii: indoor air curtain, outdoor air 
+curtain iv: outdoor air curtain, and insulation mode vi: and insulation mode 
+According to the previous studies, condensation occurs on the outer glass pane at the 
+cavity side when the vents operate in reverse (i.e., when indoor air enters into the cavity). 
+In general, this phenomenon occurs when th e oscillating pattern of airflow through the 
+vents is not sufficient to dispel the condensati on from the surfaces [17]. The result of an 
+experiment by Baker and Mcevoy (2000) indica tes that when the doors of the test room 
+(including the exhaust vents) are closed, the airflow velocity reduction inside the cavity 
+can lead to condensation [17]. Other studies suggest that the application of single-layer 
+glass as an outer pane can result in lower surface temperatures and condensation [18]. 
+To achieve the optimum configuration of the ventilated windows, analyzing their 
+thermal performance is essential. Hence, the thermal behavior of ventilated windows, or 
+supply air windows, have received notable observation in the literature in the past few 
+decades [8,14,19–23]. The thermal performa nce of the ventilated window has been 
+investigated via experimental methods [8 ,24,25]. Oftentimes, experiments were 
+conducted to validate either CFD or energy balance models or to assess the risk of 
+condensation [8,17,25,26]. Experimental studies are of course highly instructive, but also 
+rather expensive and time-consuming. This makes them less effective for parametric 
+studies. Deployed carefully, CFD-based numerical simulations can provide alternative or 
+at least complementary means of investigation [27]. As such, there have been advances in 
+CFD application regarding ventilated windows. Some of the related studies have 
+concentrated on the CFD simulation of the fl ow in the cavity [8,21,26,28–32], some have 
+concentrated on the overall energy perfor mance [25,33–36], and some compared supply 
+air window with the other alternatives [37–4 3]. As many studies have confirmed, CFD 
+simulation has the potential to yield high-resolution information about the flow field 
+nature. Needless to say, the resources needed for detailed 3D simulations are considerable 
+[25,27]. 
+The study of the literature in this area  reveals many different approaches to 
+numerical simulation. This is due to the vari ety of possible geometric configurations as 
+well as to the diversity of the heat transfer modes (natural or forced convection, with or 
+without consideration of radiation). In this context, Table 1 summarizes the results of a 
+comprehensive review of the topically relevant  CFD applications (from the oldest to the 
+most recent one). It entails information on the studies’ turbulence modeling approach, the 
+solar radiation modeling approach, the main objective of the study and considered 
+parameters, the type of the window, and if  coupled (indoor airflow and outdoor wind 
+Figure 1. Schematic illustration of the principle operation modes of a ventilated window. Adapted
+from [8,9]. i: Supply, exhaust ii: exhaust, indoor air curtain iii: indoor air curtain, outdoor air curtain
+iv: outdoor air curtain, and insulation mode vi: and insulation mode
+According to the previous studies, condensation occurs on the outer glass pane at the
+cavity side when the vents operate in reverse (i.e., when indoor air enters into the cavity).
+In general, this phenomenon occurs when the oscillating pattern of airﬂow through the
+vents is not sufﬁcient to dispel the condensation from the surfaces [17]. The result of an
+experiment by Baker and Mcevoy (2000) indicates that when the doors of the test room
+(including the exhaust vents) are closed, the airﬂow velocity reduction inside the cavity
+can lead to condensation [17]. Other studies suggest that the application of single-layer
+glass as an outer pane can result in lower surface temperatures and condensation [18].
+To achieve the optimum conﬁguration of the ventilated windows, analyzing their
+thermal performance is essential. Hence, the thermal behavior of ventilated windows, or
+supply air windows, have received notable observation in the literature in the past few
+decades [8,14,19–23]. The thermal performance of the ventilated window has been investi-
+gated via experimental methods [8,24,25]. Oftentimes, experiments were conducted to vali-
+date either CFD or energy balance models or to assess the risk of condensation [8,17,25,26].
+Experimental studies are of course highly instructive, but also rather expensive and time-
+consuming. This makes them less effective for parametric studies. Deployed carefully,
+CFD-based numerical simulations can provide alternative or at least complementary means
+of investigation [27]. As such, there have been advances in CFD application regarding
+ventilated windows. Some of the related studies have concentrated on the CFD simulation
+of the ﬂow in the cavity [ 8,21,26,28–32], some have concentrated on the overall energy
+performance [25,33–36], and some compared supply air window with the other alterna-
+tives [37–43]. As many studies have conﬁrmed, CFD simulation has the potential to yield
+high-resolution information about the ﬂow ﬁeld nature. Needless to say, the resources
+needed for detailed 3D simulations are considerable [25,27].
+The study of the literature in this area reveals many different approaches to numerical
+simulation. This is due to the variety of possible geometric conﬁgurations as well as to the
+diversity of the heat transfer modes (natural or forced convection, with or without consid-
+eration of radiation). In this context, Table 1 summarizes the results of a comprehensive
+review of the topically relevant CFD applications (from the oldest to the most recent one).
+It entails information on the studies’ turbulence modeling approach, the solar radiation
+modeling approach, the main objective of the study and considered parameters, the type
+of the window, and if coupled (indoor airﬂow and outdoor wind ﬂow), decoupled (just
+indoor airﬂow), two-dimensional, or three-dimensional simulations were performed.
+--- PAGINA 3 ---
+Energies 2021, 14, 2420 3 of 20
+Table 1. Overview of ventilated window thermal performance studies based on CFD simulations.
+Ref. Window
+Type
+Dimension/Coupling/
+Steady or Transient Main Objective of the Study T urbulence and
+Radiation Modeling
+[12] SM 2D/S/DC
+Different glass types, conﬁgurations, and ventilation
+were considered to evaluate the thermal performance
+of the window in summertime.
+K-ε/NS
+[28] OAC 2D/T/DC
+The impact of the glazing layer order also ventilation
+properties on the total solar energy transmittance
+plus the thermal performance of double façades
+were evaluated.
+Standard K-ε/HS
+[44] IM 3D/S/DC
+The heat transfer rate from a window surface was
+evaluated for different aluminum blade angles for
+both summer and winter conditions.
+K-ε/NS
+[21] DSF
+(OAC) 3D/S/DC
+The impact of blind position, angle, and air outlet
+position on the airﬂow development of the window
+was numerically analyzed.
+K-ε realizable/NS
+[8] SM, EM 3D/S/DC
+A new method was suggested to apply both in CFD
+and radiation calculations to determine airﬂow, and
+heat transfer within the window.
+K-ε RNG/S2S
+[34] SM 3D/S/C
+Building energy simulation, moreover integrated
+CFD was applied to assess the double-skin façade
+energy performance.
+K-ε RANS/NS
+[27] DSF
+(OAC) 2D/S/DC
+A numerical method was employed to evaluate the
+thermal behavior of the ventilated faced with
+different angles of the venetian blind.
+K-ω model MC model
+[15] OAC 2D/T/DC
+The main goal of the study was to investigate the
+inﬂuence of solar radiation on the airﬂow behavior as
+well as temperature distribution on a glass façade
+including external louvers.
+K-ε RANS/DO
+[35] DSF
+(SM) 3D/S/DC
+A simple analytical technique was introduced to the
+contribution of solar radiation in the DSF’s
+energy balance.
+K-ε RANS/HS
+[31] OAC 2D/S/C
+To numerically evaluate the buoyancy force and
+address the high computational cost, the porous
+model was suggested, and the accuracy of the model
+was investigated.
+Standard K-ε/HS
+[45] IAC 2D/S/DC Overall forced convective heat transfer within an
+airﬂow window was estimated. K-ε RNG/NS
+[46] EM 3D/T/C
+Different building envelopes and building
+orientations and their effect on DSF thermal
+performance were examined numerically.
+K-ε RNG/DO
+[14] SM 3D/S/DC The thermal behavior of the supply air window was
+compared for the natural and forced ﬂow cases. SST K-ω, DO
+[47] EM, OAC 2D/S/DC
+The total heat gain decrease provided by ventilated
+glazing units was examined to insulated units under
+summer conditions. A different operating design, as
+well as optimum cavity space, were investigated.
+laminar ﬂow/S2S
+[1] SM 2D/S/DC
+CFD simulation was applied to recalculate windows
+simulation parameters and apply them in a
+simpliﬁed building simulation model.
+Laminar, radiative
+temperature

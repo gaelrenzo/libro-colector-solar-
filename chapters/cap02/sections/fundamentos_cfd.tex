@@ -2,7 +2,8 @@
 \section{Fundamentos de dinámica de fluidos computacional (CFD)}
 \label{sec:cap02_fundamentos_cfd}
 
-Este apartado expone detalladamente los aspectos fundamentales de fundamentos de dinámica de fluidos computacional (cfd) para el colector solar de aire.
-El análisis del comportamiento termo-fluidodinámico requiere la formulación de ecuaciones constitutivas específicas.
-Se consideran condiciones de frontera realistas para aproximar el modelo a un escenario industrial real.
-Los parámetros resultantes serán fundamentales para el proceso de validación cruzada entre modelos teóricos y numéricos.
+La Dinámica de Fluidos Computacional (CFD) discretiza las ecuaciones continuas en un conjunto de ecuaciones algebraicas.
+El método de volúmenes finitos (FVM) es el estándar de oro en resolvedores de ingeniería térmica debido a su conservación conservativa estricta.
+Las ecuaciones de Navier-Stokes promediadas por Reynolds (RANS) resuelven el flujo medio y modelan la turbulencia a través de aproximaciones.
+Los modelos de turbulencia de dos ecuaciones, como el k-épsilon y el SST k-omega, son ampliamente utilizados por su estabilidad y precisión.
+El modelo SST k-omega de Menter destaca al combinar la precisión en la capa límite cercana a la pared con la robustez del k-épsilon en el canal libre.

@@ -1,0 +1,105 @@
+--- INFORMACION DEL MOLDE ---
+Num Paginas: 88
+Metadatos: {'/CreationDate': "D:20240115100214-05'00'", '/Creator': 'Adobe Illustrator 28.1 (Macintosh)', '/ModDate': "D:20240115100214-05'00'", '/Producer': 'Adobe PDF library 17.00', '/Title': '978-65-5360-473-5', '/Trapped': '/False'}
+
+--- PAGINA 1 ---
+científica digital
+científica digital
+
+--- PAGINA 2 ---
+Edgardo Divier Incio Capuñay
+Jean Paul Berrospi Noria
+Fredy Bernardo Coyla Apaza
+Adhemir Homero Gutiérrez Gallegos
+Alex Mario Lerma Coaquira
+UNA HERRAMIENTA TECNOLÓGICA PARA LA MEJORA 
+DEL RENDIMIENTO ACADÉMICO DE ESTUDIANTES DE 
+CIENCIAS DE LA SALUD
+2023 - GUARUJÁ - SP
+1ª EDIÇÃO
+científica digital
+--- PAGINA 3 ---
+Diagramação e arte
+Equipe editorial
+Imagens da capa
+Adobe Stock - licensed by Editora Cientíﬁca Digital - 2023
+2023 by Editora Cientíﬁca Digital 
+Copyright do Texto © 2023 Os Autores
+Copyright da Edição © 2023 Editora Cientíﬁca Digital
+Acesso Livre - Open Access
+EDITORA CIENTÍFICA DIGITAL LTDA
+Guarujá - São Paulo - Brasil
+www.editoracientiﬁca.com.br - contato@editoracientiﬁca.com.br
+O conteúdo deste livro e seus dados em sua forma, correção e confiabilidade são de 
+responsabilidade exclusiva dos autores.  É permitido o download e compartilhamento   desde 
+que no formato Acesso Livre (Open Access) com os créditos atribuídos aos autores, mas 
+sem a possibilidade de alteração de nenhuma forma ou utilização para fins comerciais.
+Esta obra está licenciado com uma Licença Creative Commons Atribuição-Não Comercial-Sem Derivações 4.0 
+Internacional (CC BY-NC-ND 4.0).
+Dados Internacionais de Catalogação na Publicação (CIP)
+H564 Una herramienta tecnológica para la mejora del rendimiento académico de estudiantes de ciencias de la salud / Edgardo 
+Divier Incio Capuñay, Jean Paul Berrospi Noria, Fredy Bernardo Coyla Apaza, et al. – Guarujá-SP: Cientíﬁca Digital, 2023.
+E-BOOK
+ACESSO LIVRE ON LINE  - IMPRESSÃO PROIBIDA
+Otros autores: Adhemir Homero Gutiérrez Gallegos, Alex Mario Lerma Coaquira.
+Formato: PDF
+Requisitos de sistema: Adobe Acrobat Reader
+Modo de acesso: World Wide Web
+Inclui bibliograﬁa
+ISBN 978-65-5360-473-5
+DOI 10.37885/978-65-5360-473-5
+1. Educación para la salud. I. Capuñay, Edgardo Divier Incio. II. Noria, Jean Paul Berrospi. III. Apaza, Fredy Bernardo 
+Coyla. IV. Título.
+ 
+Índice para catálogo sistemático:  I. Educación para la salud
+CDD 610.7
+2023
+Elaborado por Janaina Ramos – CRB-8/9166
+científica digital
+Este livro é o resultado de uma pesquisa científica sobre atividades de ciência e tecnologia, denominada 
+Software de imagenología digital y su relación con el rendimiento académico del curso Sistemas 
+computarizados en radiología de tecnología médica ( Lima, 2016) , realizada no  Universidad Alas Peruana.
+Antes de ser publicado, ele foi revisado por pares acadêmicos externos.
+--- PAGINA 4 ---
+SUMÁRIO
+INTRODUCCIÓN ......................................................................................................................................................... /eight.tab
+CAPÍTULO I .................................................................................................................................................... /nine.tab
+/one.cap RENDIMIENTO ACADÉMICO .................................................................................................................... /nine.tab
+1.1  Rendimiento académico: nociones generales  ...................................................................................... /one.tab/zero.tab
+1.2  Tipos de rendimiento académico .............................................................................................................. /one.tab/two.tab
+1.3  Factores que inciden en el rendimiento académico  .......................................................................... /one.tab/four.tab
+1.4  Indicadores del rendimiento académico  .............................................................................................. /one.tab/seven.tab
+1.5  Bajo rendimiento académico  ..................................................................................................................... /two.tab/zero.tab
+1.6  Estrategias para la mejora del rendimiento académico ................................................................... /two.tab/one.tab
+CAPÍTULO II ................................................................................................................................................... /two.tab/four.tab
+/two.cap IMAGENOLOGÍA MÉDICA ........................................................................................................................ /two.tab/four.tab
+2.1  ¿Qué es la imagenología?  ............................................................................................................................ /two.tab/four.tab
+2.2  Tipos de imagenología ................................................................................................................................. /two.tab/six.tab
+2.3  Pruebas de imagenología  ........................................................................................................................... /two.tab/seven.tab
+2.3.1  Radiografía por rayos X ................................................................................................................................................................... /two.tab/seven.tab
+2.3.2  Tomografía computarizada .......................................................................................................................................................... /two.tab/nine.tab
+2.3.3  Ultrasonido ............................................................................................................................................................................................ /three.tab/one.tab
+2.3.4  Imagen por resonancia magnética  ....................................................................................................................................... /three.tab/three.tab
+2.3.5 Medicina nuclear  .............................................................................................................................................................................. /three.tab/four.tab
+2.4  Imagenología y ética  ................................................................................................................................... /three.tab/six.tab
+CAPÍTULO III .................................................................................................................................................. /three.tab/eight.tab
+/three.cap IMAGEN DIGITAL Y SOFTWARE  DE IMAGENOLOGÍA DIGITAL .......................................................... /three.tab/eight.tab
+3.1  Imagen digital médica  .................................................................................................................................. /three.tab/eight.tab
+3.2  Visualización y posprocesamiento de imágenes digitales médicas ........................................... /four.tab/zero.tab
+3.3  Almacenamiento y compresión de las imágenes digitales médicas .......................................... /four.tab/two.tab
+3.4  Software  de imagenología digital  .............................................................................................................. /four.tab/four.tab
+3.5  Software  de imagenología digital: componentes  ............................................................................... /four.tab/six.tab
+3.6  Ventajas y desventajas del software  de imagenología digital  ........................................................ /four.tab/eight.tab
+CAPÍTULO IV .................................................................................................................................................. /five.tab/zero.tab
+/four.cap SOFTWARE  DE IMAGENOLOGÍA DIGITAL Y SU RELACIÓN CON EL RENDIMIENTO ACADÉMICO DEL 
+CURSO SISTEMAS COMPUTARIZADOS EN RADIOLOGÍA DE TECNOLOGÍA MÉDICA, UNIVERSIDAD 
+ALAS PERUANAS, LIMA, /two.cap/zero.cap/one.cap/six.cap  ................................................................................................................... /five.tab/zero.tab
+CAPÍTULO V ................................................................................................................................................... /seven.tab/two.tab
+--- PAGINA 5 ---
+/five.cap SOFTWARE  DE IMAGENOLOGÍA DIGITAL EN EL RENDIMIENTO ACADÉMICO ............................... /seven.tab/two.tab
+5.1  Competencias digitales y la aplicación de medios tecnológicos en la educación superior  /seven.tab/two.tab
+5.2  Impacto del software de imagenología digital en la educación médica ................................... /seven.tab/five.tab
+5.3  Mejora del rendimiento académico mediante la aplicación del software de imagenología 
+digital ......................................................................................................................................................................... /seven.tab/six.tab
+REFERENCIAS BIBLIOGRÁFICAS .......................................................................................................................... /seven.tab/eight.tab
+AUTORES ..................................................................................................................................................................... /eight.tab/seven.tab

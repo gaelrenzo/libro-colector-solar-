@@ -1,0 +1,257 @@
+--- PAGINA 1 ---
+28 
+Artículo  Revista de Energía Química y Física 
+  Junio 2017 Vol.4  No.11, 28-35 
+Diseño óptico y simulación mediante dinámica de fluidos computacional de un 
+calentador solar de aire basado en colectores parabólicos compuestos 
+VENEGAS-REYES, Eduardo 1†*, RODRÍGUEZ-MUÑOZ, Norma A. 1, MARTÍN-DOMINGUEZ, 
+Ignacio R.2
+1Cátedras CONACYT, en Centro de Investigación en Materiales Avanzados S. C.  Calle CIMAV 110, Durango, Durango, 
+34147, México. (614)  439 4898 
+2Centro de Investigación en Materiales Avanzados S. C.  Departamento de Ingeniería Sustentable, Calle CIMAV 110, 
+Durango, Durango, 34147, México. (614)  439 4898 
+Recibido Abril 15, 2017; Aceptado Junio 23, 2017 
+Resumen 
+El objetivo de este trabajo es llevar a cabo el diseño óptico y 
+simulación mediante dinámica de fluidos computacional (CFD) 
+de un calentador solar de aire de baja concentración. El 
+calentador estudiado está basado en un Colector Parabólico 
+Compuesto (CPC) del cual se desea conocer su comportamiento 
+térmico. Se llevó a cabo el trazado de rayos en el software 
+SolTrace para determinar la radiación incidente en el receptor 
+cilíndrico, dentro del cual se hace circular aire. Posteriormente, 
+se realizó un estudio de CFD para determinar el incremento de 
+temperatura del aire que circula por el receptor y la influencia del 
+uso de aletas que se encuentran en contacto con su pared interior. 
+Una ventaja de esta configuración sobre la de un colector solar 
+plano, es que se puede hacer circular el aire directamente 
+mediante un soplador sin necesidad de un difusor, reduciendo la 
+caída de presión y la pérdida de presión por fugas de aire en las 
+uniones. La contribución de este trabajo es el estudio de la 
+influe
+ncia del incremento del área de intercambio de calor 
+mediante el uso de aletas. Las cuales se encuentran en contacto 
+con las paredes internas del tubo receptor del concentrador solar. 
+Calentador solar de aire, Colector parabólico compuesto, 
+Trazado de rayos 
+Abstract 
+The objective of this work is to carry out the optical design and 
+simulation by means of computational fluid dynamics (CFD) of 
+a low concentration solar air heater. The studied heater is based 
+on a Compound Parabolic Collector (CPC), from which its 
+thermal behaviour is still to be known. The ray tracing was 
+performed in the SolTrace software to determine the incident 
+radiation on the cylindrical receiver, where air is circulating. 
+Afterwards, a CFD study was carried out to determine the 
+increase in the circulating air temperature within the receiver. 
+Adittionaly the influence of the use of fins in contact with the 
+interior wall of the receiver is calculated. An advantage of this 
+configuration over a flat solar collector is that the air can circulate 
+directly through a blower without the need of a diffuser; reducing 
+the pressure drop and losses by air leakage at the joints. The 
+contribution of this work is the study of the influence on the 
+increase of the heat exchange area by the use of fins. The fins are 
+in contact with the inner walls of the receiver tube of the solar 
+concentrator. 
+Solar air heater, Compound parabolic collector, Ray tracing 
+Citación: VENEGAS-REYES, Eduardo, RODRÍGUEZ -MUÑOZ, Norma A, MARTÍN -DOMINGUEZ, Ignacio R.  Diseño 
+óptico y simulación mediante dinámica de fluidos computacional de un calentador solar de aire basado en colectores 
+parabólicos compuestos.Revista de Energía Química y Física.2017.4-11:28-35. 
+*Correspondencia al Autor (Correo Electrónico: eduardo.venegas@cimav.edu.mx)
+† Investigador contribuyendo como primer autor 
+© ECORFAN-Bolivia    www.ecorfan.org/bolivia
+--- PAGINA 2 ---
+29 
+Artículo  Revista de Energía Química y Física 
+Junio 2017 Vol.4 No.11, 28-35 
+ISSN 2410-3934  
+ECORFAN® Todos los derechos reservados. 
+VENEGAS-REYES, Eduardo, RODRÍGUEZ -MUÑOZ, Norma A, MARTÍN -
+DOMINGUEZ, Ignacio R.  Diseño óptico y simulación mediante dinámica de 
+fluidos computacional de un calentador solar de aire basado en colectores 
+parabólicos compuestos.Revista de Energía Química y Física.2017. 
+Introducción 
+Un problema importante de los productos 
+agrícolas es que son perecederos. Una forma de 
+conservarlos es secándolos, sin embargo, el 
+secado de productos agrícolas es costoso y emite 
+gases de efecto de invernadero, ya que 
+generalmente se hace mediante la quema de 
+combustibles como el gas. Por otro lado los 
+productores agrícolas tienen que vender sus 
+productos a precios bajos debido a que estos 
+tienen caducidad.  
+El secado de estos productos les da valor 
+agregado y permite que los productores puedan 
+obtener mejores ganancias con estos. Una forma 
+de secar productos es calentando el aire que 
+circula por ellos, este aire se puede calentar 
+mediante energía solar. Se han hecho esfuerzos 
+para el uso de energía solar en el secado de 
+productos agrícolas (Torres et al., 2016), (Terres 
+et al., 2016). La tecnología más desarrollada para 
+esto son los colectores planos, sin embargo estos 
+tienen algunas desventajas; por ejemplo es más 
+difícil que estén sellados perfectamente, por lo 
+que tienen fugas de aire y caídas de presión. 
+Existen diferentes tecnologías de concentración 
+solar, como el colector parabólico compuestos 
+(CPC), canal parabólico, fresnel lineal e incluso 
+heliostatos (Ledezma, 2016). 
+El Colector Parabólico Compuesto (CPC) 
+es una tecnología que ya se ha usado en 
+calentadores solares de aire. Antonelli et al. 
+(2016) propone una metodología para estimar las 
+pérdidas térmicas dentro de un colector CPC 
+para ser usado en el diseño y validación de 
+nuevos colectores, conceptos y materiales. En 
+Wang 
+et al. (2014) se llevó a cabo la simulación 
+y experimentación de un colector solar para 
+calentar aire basado en CPC y un receptor de 
+tubo evacuado con intercambiador de calor de 
+cobre en forma de U.  
+En Wang et al. (2015) se diseñó un 
+calentador solar de aire basado en CPC e 
+intercambiador de calor de tubo evacuado 
+concéntrico, para calentar el aire de 150 °C - 230 
+°C para producción industrial. Por otro lado, se 
+han llevado a cabo estudios con dinámica de 
+fluidos computacional usando el software 
+comercial FLUENT®
+. Wadhawan et al.  (2017) 
+diseñaron un sistema de almacenamiento de 
+calor con cambio de fase para un calentador de 
+aire.
+ Sharma y Kalamkar (2017) realizaron  un 
+estudio numérico de la transferencia de calor 
+convectiva forzada en un calentador solar con 
+aletas delgadas, se probaron diferentes 
+geometrías de aletas y condiciones de flujo . 
+Menasria et al. (2017) realizaron un estudio 
+numérico del desempeño termo-h
+idráulico de un 
+calentador solar de aire plano, equipado con 
+deflectores rectangulares.  
+También se han llevado a cabo estudios 
+con otros programas. Kumar y Chand (2017) 
+desarrollaron un modelo teórico de un calentador 
+solar de aire basado en la ecuación de balance de 
+energía, el software usado en la simulación fue 
+Matlab®
+. Thakur et al. (2017) llevaron a cabo la 
+simulación en 3D y validación experimental de 
+un calentador solar de aire con costillas 
+hiperbólicas.  
+Las predicciones del modelo están acordes 
+con las correlaciones de Blasius, Dittus-Boelter 
+y los resultados experimentales. Paradis et al. 
+(2015) desarrollaron un modelo térmico 
+unidimensional de un colector solar de aire de 
+tubos evacuados bajo condiciones transitorias. 
+Jin et al. (2017) llevaron
+ a cabo el estudio 
+numérico de un calentador de aire solar rugoso 
+con costillas en forma de V. Se llevaron a cabo 
+simulaciones en tercera dimensión para 
+diferentes geometrías variando la distancia 
+escalonada; la altura de las costillas, el ángulo de 
+ataque, la inclinación y el número de Reynolds. 
+ 
+--- PAGINA 3 ---
+30 
+Artículo  Revista de Energía Química y Física 
+Junio 2017 Vol.4 No.11, 28-35 
+ISSN 2410-3934  
+ECORFAN® Todos los derechos reservados. 
+VENEGAS-REYES, Eduardo, RODRÍGUEZ -MUÑOZ, Norma A, MARTÍN -
+DOMINGUEZ, Ignacio R.  Diseño óptico y simulación mediante dinámica de 
+fluidos computacional de un calentador solar de aire basado en colectores 
+parabólicos compuestos.Revista de Energía Química y Física.2017. 
+Algunos desarrollos se han evaluado 
+experimentalmente. Yeh (1994) desarrolló un 
+colector solar para calentar aire con aletas y 
+deflectores, lo que mejora significativamente la 
+transferencia de calor. Li et al. (2015) 
+desarrollaron un colector solar para 
+calentamiento de aire con protuberancias 
+hemisféricas en el plato absorbedor con el fin de 
+mejorar su eficiencia. Se analizó su desempeño 
+tanto en el aspecto óptico como en el 
+termodinámico. Liu et al. (2013) desarrollaron 
+un colector solar de aire de tubos evacuados 
+acoplados a CPCs simplificados.  
+El receptor de tubo evacuado trabaja por 
+efecto termosifónico usan líquido que entra en 
+contacto con un serpentin donde se hace pasar 
+aire. Pramuang y Exell (2005) ll
+evaron a cabo la 
+evaluación experimental de un calentador de aire 
+basado en un concentrador parabólico 
+compuesto truncado y un absorbedor plano. 
+Alam y Kim (2017) presentan
+ una revisión de 
+varias técnicas usadas para incrementar el 
+desempeño de calentadores solares de aire de 
+doble paso. Abdullah y Bassiouny (2014) 
+llevaron
+ a cabo un estudio teórico y 
+experimental de un calentador de aire solar 
+cilíndrico flexible.  
+El colector solar está hecho con películas 
+de polietileno de baja densidad (LPDE por sus 
+siglas en inglés), actuando como absorbedor 
+negro, un aislamiento trasero y cubiertas 
+transparentes dobles sellados juntos en las 
+orillas. El colector se infla cuando se sopla aire a 
+través de él. Acir et al. (2017) identificaron los 
+parámetros óptimos que afectan las eficiencias 
+de energía y exergia para un nuevo diseño de 
+calentador solar de aire usando un análisis 
+relacional gris (GRA por sus siglas en inglés). 
+Finalmente Alam y Kim (2017) presentan una 
+revisión de varias técnicas usadas para 
+incrementar el desempeño de calentadores 
+solares de aire de doble paso. Se categorizaron 
+los diferentes parámetros de los sistemas y su 
+operación para entender su desempeño.  
+La literatura revela que numerosas 
+técnicas se han enfocado en mejorar la 
+transferencia de calor.  
+En el presente trabajo se llevaron a cabo: 
+el diseño óptico y la simulación de dinámica de 
+fluidos computacional de un calentador de aire 
+solar basado en un Colector Parabólico 
+Compuesto (CPC) y un receptor cilíndrico. Para 
+determinar la energía incidente en el receptor 
+cilíndrico se llevó a cabo el trazado de rayos 
+considerando una radiación incidente de 1000 
+W/m2. Se llevó a cabo la comparación de la 
+transferencia de calor sin y con aletas dentro del 
+receptor cilíndrico, donde se espera que al 
+incrementarse el área de intercambio de calor 
+mejore la transferencia de calor, sin embargo, 
+debe existir un límite para dicha área. 
+En la sección dos se describe la 
+metodología, la cual se basa en el diseño óptico 
+del CPC, la técnica de trazado de rayos y e n 
+dinámica de fluidos computacional. En la 
+sección tres se muestran los resultados y 
+finalmente en la sección cuatro las conclusiones. 
+Metodología 
+En esta sección se muestra la metodología para 
+el diseño óptico y la obtención de la potencia 
+incidente sobre el receptor cilíndrico. 
+Posteriormente se llevó a cabo la simulación en 
+dinámica de fluidos computacional para obtener 
+los perfiles de temperatura y los flujos de calor 
+hacia el aire que circula por el receptor 
+cilíndrico. 
+Diseño óptico 
+Un CPC está compuesto por dos parábolas 
+truncadas, en este caso el perfil del CPC se 
+proyecta a lo largo de un canal. La figura 1 
+muestra un CPC con receptor cilíndrico, c es el 
+ángulo medio de aceptación. Las porciones del 
+colector AB y AC son circulares, mientras que 
+las porciones BD y CE son parabólicas.  

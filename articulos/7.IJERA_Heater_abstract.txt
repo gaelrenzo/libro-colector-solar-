@@ -1,0 +1,268 @@
+--- PAGINA 1 ---
+Sohel Chaudhari et al Int. Journal of Engineering Research and Applications               www.ijera.com 
+ISSN : 2248-9622, Vol. 4, Issue 6( Version 6), June 2014, pp.47-50 
+ www.ijera.com                                                                                                                                47 | P a g e  
+ 
+ 
+ 
+CFD Analysis of Solar Air Heater 
+ 
+Sohel Chaudhari*, Mukesh Makwana**, Rajesh Choksi***, Gaurav Patel**** 
+*(ME Student, Department of Mechanial Engineering, A.D.I.T., New V.V. Nagar) 
+**(Assistant Professor, Department of Mechanial Engineering, A.D.I.T.,  New V.V. Nagar) 
+***(Associate Professor, Department of Mechanial Engineering, A.D.I.T., New V.V. Nagar) 
+****(Assistant Professor, Department of Mechanial Engineering, A.D.I.T., New V.V. Nagar ) 
+ 
+ 
+ABSTRACT 
+An attempt has been made to carry out CFD based ana lysis using FLUENT to fluid flow and heat transfer 
+characteristics of solar air heater. 3D model of the Solar Air heater involving air inlet, absorber plate, glass, 
+modelled by ANSYS Workbench and the unstructured grid was created in ANSYS. The results wer e obtained 
+by using ANSYS FLUENT software. This work is done by using computational fluid dynamics (CFD) tool with 
+respect to flow and temperature distribution inside the solar air heater.  
+Keywords-Solar Energy, Solar Air Heater, Heat transfer, CFD.      
+ 
+ 
+I. INTRODUCTION 
+Solar energy is the most considerable energy 
+source in the world. Sun, which is 1.495x1011 (m) 
+far from the earth and has a diameter of 1.39x109 
+(m), would emit approximately 1353 (W/m2) on to a 
+surface perpendicular to rays, if there was n o 
+atmospheric layer. The world receives 170 trillion 
+(KW) solar energy and 30% of this energy is 
+reflected back to the space, 47% is transformed to 
+low temperature heat energy, 23% is used for 
+evaporation/rainfall cycle in the Biosphere and less 
+than 0.5% is used in the kinetic energy of the wind, 
+waves and photosynthesis of plants. 
+Solar energy systems consist of many parts. The 
+most important part of these systems is the solar air 
+heaters where the heat transfer from sun to absorber 
+and absorber to fluid occurs. In order to affect the 
+performance of these systems, generally 
+modifications on solar air heaters are performed. 
+With the rapid development in civilization, man has 
+increasingly become dependent on natural resources 
+to satisfy his needs. Drying fruits and vegetables such 
+as grapes, pepper, pawpaw, etc. is one of those 
+indispensable processes that require natural resources 
+in the form of fuels. Solar energy air heaters are 
+special kind of heat exchangers that transform solar 
+radiation energy to inter nal energy of the transport 
+medium. The major component of any solar system is 
+the solar air heater. Of all the solar thermal air 
+heaters, the solar air heaters though produce lower 
+temperatures, have the advantage of being simpler in 
+design, having lower maintenance and lower cost. To 
+obtain maximum amount of solar energy of minimum 
+cost the solar air heaters with thermal storage have 
+been developed. Solar air heater is type of solar air 
+heater which is extensively used in many applications 
+such as residential, industrial and agricultural fields. 
+Solar air heaters, because of their simplicity are 
+cheap and most widely used collection devices of  
+ 
+solar energy, has great potential for low temperature 
+applications, particularly for drying of agricultural 
+products. The thermal efficiency of a solar air heater 
+is significantly low because of the low value of the 
+convective heat transfer coefficient between the 
+absorber plate and the air, leading to high absorber 
+plate temperature and high heat losses to the 
+surroundings. It has been found that the main thermal 
+resistance to the heat transfer is due to the formation 
+of a laminar sub -layer on the absorber plate heat -
+transferring surface. 
+A solar air heater absorbs incident solar 
+radiations and transforms them into useful heat for 
+heating the collector fluid such as water and air. Solar 
+air heaters, being inherently simple and cheap, are 
+most widely used collection devices. Solar air heaters 
+find several applications in space heating, seasoning 
+of timber and crop drying. 
+ 
+II. PROBLEM STATEMENT 
+The objective of present study is to perform CFD 
+simulation for solar air heater. The results obtained 
+by CFD simulation are been validated with 
+experimental results. The experimental conditions 
+taken for solar air heater, the same has been used for 
+CFD simulation. The overall aim of this work is to 
+understand the flow behaviour and temperature 
+distribution of air inside the solar air heater and 
+compare the outlet temperature of air with 
+experimental results and also will see results  with 
+different parameters of solar air heater.  
+RESEARCH ARTICLE                                                            OPEN ACCESS 
+--- PAGINA 2 ---
+Sohel Chaudhari et al Int. Journal of Engineering Research and Applications               www.ijera.com 
+ISSN : 2248-9622, Vol. 4, Issue 6( Version 6), June 2014, pp.47-50 
+ www.ijera.com                                                                                                                                48 | P a g e  
+III. CFD ANALYSIS AND COMPARISON 
+OF CFD AND EXPERIMENTAL 
+RESULTS 
+The 3D model consisting of the solar air 
+collector involving air inlet, wavy structured absorber 
+plate, and glass cover plate is modeled by ANSYS 
+Workbench and the unstructured grid was created in 
+ANSYS ICEM. The results were obtained by using 
+ANSYS FLUENT software  
+ 
+Fig.1: 3D modeling 
+ 
+ 
+ 
+Fig. 2: 3D mesh  
+ 
+The overall dimension for solar air heater is 
+1000X1000X137 mm3 with 3 mm thick glass plate. A 
+sheet of copper with thickness 0.001 m and 1x 1 m2 
+area with longitudinal fins attached to its upper and 
+lower surfaces was used as the absorber plate. The 
+distance between two adjacent fins and fins height 
+are 0.1 and 0.04 m, respectively. Two sheets of 
+ordinary glass (0.003 m thick) were used to cover the 
+heater in order to minimize the heat losses from the 
+top of the air heater. The gap between the two glass 
+covers equals 0.03 m. Another sheet of galvanized 
+iron, with thickness 0.001 m, was used as a back  
+plate. The heater was insulated from the back and 
+sides using foam as an insulating material with 
+thickness 0.04 m. The absorber plate divides the gap 
+between the lower glass cover and the back plate into 
+two channels of 0.05 m depth. [6] 
+ 
+Table-1: Properties of air 
+Property Value 
+Mass flow rate of air 0.0203 kg/sec 
+Density 1.1925 kg/m3 
+Thermal Conductivity 0.0259 W/m K 
+Specific Heat 1006.2 J/kg K 
+Table-2: Properties of aluminium 
+Property  Value  
+ Density  2719 kg/m3  
+Thermal   
+Conductivity  
+202.4 W/m K 
+Specific Heat  871 J/kg K  
+ 
+Table-3: Properties of glass 
+Property  Value  
+Density  2500 kg/m3  
+Thermal   
+Conductivity  
+744.3 W/m K  
+Specific Heat  670 J/kg K  
+ 
+The simulation is carried out for different times 
+of the day 14 to 10 hrs. Then the r esults obtained by 
+this simulation compared with the experimental 
+results as shown in table  4. From table 4 and fig. 3 it 
+can be seen that the difference between experimental 
+and simulated outlet temperature is much similar. 
+ 
+Table-4: Comparison of experimental and simulated 
+results 
+ 
+Fig.3:-comparison of experiment and simulation 
+results 
+ 
+Sr. 
+No 
+ 
+Tim
+e  
+Hrs.  
+Solar 
+Intens
+ity  
+(W/m
+2)  
+Inlet 
+Tempe
+rature 
+(k) 
+Experim
+ent 
+results 
+Tempera
+ture (k) 
+Simulati
+on 
+results 
+Temper
+ature (k) 
+1. 14 1000 304 330 347 
+2. 13 980 306 328 346 
+3. 12 950 303 330 348 
+4. 11 900 305 332 351 
+5. 10 800 304 325 343 
+--- PAGINA 3 ---
+Sohel Chaudhari et al Int. Journal of Engineering Research and Applications               www.ijera.com 
+ISSN : 2248-9622, Vol. 4, Issue 6( Version 6), June 2014, pp.47-50 
+ www.ijera.com                                                                                                                                49 | P a g e  
+Also the temperature distribution and flow 
+distribution are obtained by CFD simulation. The 
+mesh file of geometry i n fluent software shown in fig 
+4. The contours obtained for temperature distribution, 
+velocity distribution and pressure distribution are 
+shown in fig 5,6,7 respectively. 
+ 
+Fig .4: Meshing file in fluent software 
+ 
+ 
+Fig .5: contours of temperature distribution 
+ 
+ 
+Fig .6: Contours of velocity magnitude(m/s) 
+ 
+ Fig .7:contours of static pressure(pascal) 
+ 
+Constant mass flow rate 0.0203kg/s and inlet 
+temperature 305K is taken and the heat flux is varied 
+By the CFD simulation results are obtained. Results 
+of performance of solar air heater with different heat 
+flux are seen in table- 5.  
+ 
+ 
+Table 5: Simulation Results 
+Sr. 
+ no. 
+Heat flux Simulation results 
+Outlet Temperature(k) 
+1. 500 353 
+2. 490 352 
+3. 485 351 
+4. 450 348 
+5. 400 343 
+6. 350 338 
+ 
+ 
+Graph 2:-Heat flux v/s temperature 
+ 
+Outlet temperature is decrease a s heat flux is 
+decrease. The behavior can be seen in fig. 
+ 
+IV. CONCLUSION 
+In this present investigation, a numerical 
+prediction has been conducted to study heat transfer 
+and flow friction behaviors of a solar air heater 
+having fin on the absorber plate surface . The 
+following conclusions have been drawn from the 
+present work: 
+1.  There is a good agreement results reference for 
+outlet air temperatures. Although there are some 
+small discrepancies due to some experimental 
+imperfectness matters, we still have a good  
+confidence in the CFD simulation program that 
+can be used in the future for more solar air heater 
+problem. 
+2.  Effect of different heat flux value on solar air 
+heater shown that increase the value of heat flux 
+increase the thermal efficiency of solar air 
+heater. 
+3.  In recent years CFD has been applied in the 
+design of solar air heater. The studies reported 
+that the quality of the solutions obtained from 
+CFD simulations are largely within the 

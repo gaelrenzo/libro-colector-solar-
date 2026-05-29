@@ -1,0 +1,103 @@
+--- PAGINA 1 ---
+How to cite
+Complete issue
+More information about this article
+Journal's webpage in redalyc.org
+Scientific Information System Redalyc
+Network of Scientific Journals from Latin America and the Caribbean, Spain and
+Portugal
+Project academic non-profit, developed under the open access initiative
+Enfoque UTE
+ISSN: 1390-6542
+enfoque@ute.edu.ec
+Universidad Tecnológica Equinoccial
+Ecuador
+Toapanta, Luis Fernando; Anthony Xavier, Andrade; Quitiaquez Sarzosa, William
+CFD Analysis of a solar flat plate collector with different cross sections
+Enfoque UTE, vol. 11, no. 2, 2020, -June, pp. 99-112
+Universidad Tecnológica Equinoccial
+Ecuador
+DOI: https://doi.org/10.29019/enfoque.v11n2.601
+Available in: https://www.redalyc.org/articulo.oa?id=572262509012
+--- PAGINA 2 ---
+Enfoque UTE, V.11-N.2, Abr.2020, pp. 95-108 
+http://ingenieria.ute.edu.ec/enfoqueute/ 
+e-ISSN: 1390-6542 
+DOI: 10.29019/enfoque.v11n2.601
+Recibido (Received): 2020/01/26 
+Aceptado (Accepted): 2020/03/17 
+Publicado (Published): 2020/04/01 
+CC BY EC 3.0 
+CFD Analysis of a solar flat plate collector  
+with different cross sections
+(Análisis CFD de un colector de placa plana  
+con distintas secciones transversales)
+Anthony Xavier Andrade,1 William Quitiaquez Sarzosa,2 Luis Fernando Toapanta3
+Abstract
+Low and medium solar heating systems used for domestic and industrial applications, such as water and space hea-
+ting, usually utilize solar ﬂat plate collectors in order to absorb solar thermal energy converting it into heat and then 
+transferring the heat to a ﬂuid (usually water or air) that ﬂows through it. The aim of this study is to evaluate the solar 
+ﬂat plate collector’s efﬁciency and the ﬂuid behavior inside the pipeline with three different cross sections, whose 
+hydraulic diameters are 10, 5.12 and 6.16 mm, by using ANSYS Fluent. The results obtained from the Computational 
+Fluid Dynamics (CFD) tool showed that the collector with the Type I cross section reached temperatures up to 330 K 
+at the pipe outlet obtaining an efﬁciency of 68 %, higher than those of Types II and III, whose efﬁciencies were 51 % 
+and 60 %, respectively. Type I cross section also presented the lowest values in both speed and pressure drop, these 
+being 0.266 m/s and 108.3 Pa, respectively. 
+Keywords
+Solar collector, cross section, efﬁciency, ANSYS Fluent, CFD.
+Resumen
+Los sistemas de calefacción solar utilizados para propósitos industriales y domésticos como sistemas de calenta-
+miento de agua y sistemas de calefacción, generalmente utilizan colectores solares de placa plana para absorber la 
+energía solar térmica convirtiéndola en calor para luego transferir el calor a un ﬂuido (generalmente agua o aire) que 
+circula a través de él. El presente artículo evalúa la eﬁciencia del colector solar de placa plana, así como el compor-
+tamiento del ﬂuido (agua o aire) dentro de la tubería con tres diferentes secciones transversales, cuyos diámetros hi-
+dráulicos son 10, 5.12 y 6.16 mm, utilizando ANSYS Fluent. Los resultados obtenidos con herramienta Computational 
+Fluid Dynamics (CFD) mostraron que el colector con la sección transversal Tipo I alcanzó temperaturas de hasta 
+330 K en la salida de la tubería, obteniendo una eﬁciencia del 68 %, superior a la de los Tipos II y III, cuyas eﬁciencias 
+fueron de 51 % y 60 %, respectivamente. La sección transversal del Tipo I también presentó los valores más bajos, 
+tanto en velocidad como en caída de presión, con valores de 0.266 m/s y 108.3 Pa, respectivamente.
+Palabras clave
+Colector solar, sección transversal, eﬁciencia, ANSYS Fluent, CFD.
+1. Introduction
+Due to the environmental crisis and growing demand for energy, the development and imple-
+mentation of renewable energy has become a matter of great importance. Solar energy is a 
+promising source of energy due to its free availability and low operating costs, along its being 
+a non-polluting source (Li, Liu, Guo, & Zhou, 2017; Kannan & Vakeesan, 2016). Solar energy can 
+be used in solar water heating systems, pool heaters and other heating systems (Ingle, Pawar, 
+Deshmukh, & Bhosale, 2013). Within solar energy systems, the main component is the solar co-
+llector, which is a heat exchanger that absorbs and captures incident solar radiation converting 
+1 Universidad Politécnica Salesiana, Quito-Ecuador (aandradec1@est.ups.edu.ec), https://orcid.org/0000-0002-3494-1963.
+2 Universidad Politécnica Salesiana, Quito-Ecuador (wquitiaquez@ups.edu.ec).
+3 Universidad Politécnica Salesiana, Quito-Ecuador (ltoapanta@ups.edu.ec).
+--- PAGINA 3 ---
+96
+Enfoque UTE, V.11 -N.2, Abr. 2020, pp. 95-108
+it into heat and then transferring the heat to a ﬂuid (usually water or air) that ﬂows through the 
+collector.
+Although solar ﬂat plate collectors produce lower temperatures, they have the advanta-
+ge of being simpler in design and having lower maintenance costs and thus are the most used 
+collectors for solar heating systems in the residential and industrial sectors (Ingle, Pawar, Desh-
+mukh & Bhosale, 2013; Birhanu, Ramayya & Shunki, 2016). A typical ﬂat plate collector consists 
+of an insulated metal box with a glass or plastic cover, and a dark-colored absorber plate (Ka-
+ranth, Madhwesh, Kumar, & Manjunath, 2015), as shown in Figure 1.
+Figure 1. Schematic diagram of a ﬂat plate collector. (Mesa, 2006)
+According to Matrawy & Farkas (1997), the conﬁguration of a solar collector is an impor-
+tant factor that determines its thermal performance. A solar collector with a serpentine tube 
+works better than a conventional collector with parallel tubes due to the earlier appearance of 
+turbulent ﬂow that improves the application of heat transfer and increases its maximum efﬁ-
+ciency from 62 % to 65 %. Myrna & Beckman (1998) concluded that the internal heat transfer 
+coefﬁcient, which increased approximately 3 % when a serpentine ﬂat plate collector was used, 
+was the main reason for the performance difference between a conventional ﬂat plate collector 
+and a serpentine ﬂat pate collector. Eisenmann, Wiese, Vajen & Ackermann (2000) conducted 
+experiments on two serpentine ﬂat plate collectors, which had the same shape and geometry. 
+In the ﬁrst collector, the serpentine tube was welded directly to the absorber plate; whilst in the 
+second collector, the serpentine tube and the plate were joined without thermal fusion. Both 
+collectors were placed under the sun in identical weather conditions and their performances 
+were compared. The efﬁciency of the ﬁrst collector increased from 2 % to 2.5 %. 
+Investigations by Prakash, Vishnuprasad & Ramana (2013) and Madhukeshwara & Prakash 
+(2012) showed that the use of special surface coatings improves the optical properties of the 
+collector, the operating temperatures and the performance of the system. Sopian, Syahri, Ab-
+dullah, Othman & Yatim (2004) experimentally studied the performance of a new design of solar 
+water heater, where the collector and storage tank were integrated into the same unit. The 
+temperatures registered in the storage tank oscillated between 60 and 63 °C with a radiation 
+of 700 W/m2 and the efﬁciency of the system was 45 % with an ambient temperature of 31 °C.

@@ -1,0 +1,220 @@
+--- PAGINA 1 ---
+ 
+ 
+ 
+ 
+Vol. 3 no. 2, Verano de la Investigación Científica, 2017 
+2306 
+ 
+ANÁLISIS DEL DESEMPEÑO DE UN COLECTOR SOLAR DE PLACA 
+PLANA MEDIANTE CFD CONSIDERANDO DIFERENTES 
+CONDICIONES DE OPERACIÓN 
+Tamayo Nuñez Jannet (1), Ramírez Minguela José de Jesús (2) 
+ 
+1 [Licenciatura en Ingeniería Química, Universidad de Guanajuato] | [jannettamayo@gmail.com] 
+2 [Departamento de Ingeniería Química, División de Ciencias Naturales y Exactas, Campus Guanajuato, Universidad de 
+Guanajuato] | [jdj.ramirezminguela@ugto.mx] 
+Resumen 
+En este trabajo se presenta el análisis numérico  del desempeño de un c olector solar de placa plana  en 
+estado estacionario  mediante CFD  (Dinámica de Fluidos C omputacional, por sus siglas en inglés)  
+utilizando el software ANSYS  considerando una geometría en tres dimensiones, así como diferentes 
+condiciones de operación, tales como la variación de: flujos volumétricos a la entrada, temperaturas de 
+entrada del fluido y condiciones clima tológicas (cantidad de calor  captada por radiación  por el colector 
+solar). La construcción de la geometría se realizó con base en un colector sol ar comercial . De las 
+simulaciones realizadas se obtienen las temperaturas de salida  del flujo, los cuales permiten calcular la 
+eficiencia del modelo empleado. 
+Abstract 
+This paper presents the numerical analysis of the performance of a steady -state flat plate solar collector 
+using CFD (Computational Fluid Dynamics)  using the software ANSYS  considering a geometry in three 
+dimensions as well as different o perating conditions, such as the variation of: volumetric flows at the 
+inlet, fluid inlet temperatures and climatological conditions (amount of heat captured from radiation by the 
+solar collector). The construction of the geometry is based on a commercial solar collector. From the 
+simulations the fluid outlet temperatures were obtained, which  allow to calculat e the efficiency of the 
+model used. 
+ 
+ 
+ 
+ 
+ Palabras Clave Colector solar de placa plana; análisis numérico; variación condiciones de operación 
+--- PAGINA 2 ---
+ 
+ 
+ 
+ 
+Vol. 3 no. 2, Verano de la Investigación Científica, 2017 
+2307 
+ 
+INTRODUCCIÓN 
+El uso térmico de la energ ía solar para la 
+producción de calor a partir de la luz del sol es uno 
+de los métodos de transformación de energía más 
+viejos. Esta tecnología ha sido conocida y — en 
+ocasiones incluso inconscientemente — usada por 
+siglos. Esta ha sido redescubierta y usada  de 
+nuevo durante los últimos 45 años.  Hoy en día, 
+esta tecnología está lis ta para su aplicación, pero 
+después de este corto periodo de crecimiento, hay 
+un gran potencial de desarrollo en este campo, 
+especialmente en el campo de los colectores 
+solares [1]. 
+Principalmente dos tipos de colectores solares 
+para calefacción doméstica y producción de agua 
+caliente son usados actualmente: colectores de 
+placa plana y colectores de tubos evacuados. 
+Éstos se caracterizan por diferentes costos y 
+desempeño, por lo que es muy importante elegir el 
+colector adecuado para cada aplicación con el f in 
+de optimizar el comportamiento de todo el sistema, 
+el ahorro energético y la recuperación de la 
+inversión financiera [2]. 
+Los colectores de placa plana  suelen presentar un 
+absorbedor de metal en una carcasa rectangular 
+plana. La cubierta de vidrio en la  superficie 
+superior y el aislamiento en el otro lado limitan las 
+pérdidas térmicas. La energía solar absorbida por 
+la placa se transfiere al líquido que fluye dentro de 
+los tubos colectores. Los tubos están en buen 
+contacto térmico con la superficie del a bsorbedor. 
+El aire está  presente en el espacio entre la placa 
+del absorbedor y la cubierta transparente [2]. 
+En este trabajo se presenta el análisis numérico 
+del desempeño de dos colectores solares de placa 
+plana conectados en serie bajo diferentes 
+condiciones de operación, cuyo fluido de trabajo 
+es agua. 
+MATERIALES Y MÉTODOS 
+El modelo tridimensional empleado, mostrado en 
+la Figura 1, consiste en dos colectores solares de 
+placa plana conectados en serie.  Cada colector 
+posee una cantidad de 10 tubos colector es 
+equidistantes entre sí.  La entrada de flujo a cada 
+colector se encuentra en el extremo izquierdo de 
+su cabezal inferior y la salida , en el extremo 
+derecho de su cabezal superior.  Dicho modelo se 
+construyó con las dimensiones enlistadas en la 
+Tabla 1, la s cuales corresponden a las 
+dimensiones de un colector solar de placa plana 
+comercial. 
+ 
+ 
+ 
+El sistema de colectores se diseñó con una 
+inclinación de 30° con respecto a la horizontal.  
+Además se consideró estado estacionario y se 
+despreciaron las pérdidas de calor en el tubo 
+conector. 
+Para realizar el análisis numérico, el modelo fue 
+mallado con celdas cuadriláteras obteniendo un 
+total de 567,023 elementos y 671,653 nodos. 
+La validación del modelo fue llevada a cabo bajo 
+las siguientes condiciones de operación. 
+-Temperatura de entrada: 293.05 K 
+-Flujo volumétrico: 2.3525L/min 
+-Radiación: 1229.4905W/m2 
+Tabla 1: Dimensiones de los colectores que conforman el 
+modelo utilizado. Las dimensiones corresponden a un solo 
+colector. 
+Dimensiones del colector solar 
+Diámetro de los cabezales (m) 0.01905 
+Diámetro de los tubos colectores (m) 0.0127 
+Diámetro del tubo conector entre los dos colectores (m) 0.035 
+Altura del colector (m) 2.11 
+Longitud del colector (m) 1.22 
+Figura 1: Modelo de dos colectores solares de placa  
+plana conectados en serie empleado para el análisis 
+numérico. 
+ 
+--- PAGINA 3 ---
+ 
+ 
+ 
+ 
+Vol. 3 no. 2, Verano de la Investigación Científica, 2017 
+2308 
+ 
+Las diferentes condiciones de operación utilizadas  
+para el análisis numérico  son las mostradas a 
+continuación en las tablas : Tabla 2, Tabla 3 y 
+Tabla 4. 
+ 
+ 
+ 
+La eficiencia ( η) del sistema de colectores se 
+calcula empleando la Ecuación 1: 
+AQ
+TCpm
+
+ 
+           (Ecuación 1) 
+Donde: 
+η = eficiencia del sistema 
+m
+= flujo másico, kg/s 
+Cp = calor específico, J/kg·K 
+ΔT = diferencia de temperaturas a la 
+entrada y salida del sistema, K 
+Q
+= Flujo de calor captado por radiación, 
+W/m2 
+A = área equivalente del colector, m2 
+Durante el análisis num érico de cada uno de los 
+casos se usaron los modelos Laminar y κ-Épsilon 
+con un porcentaje de turbulencia del 5% según 
+correspondiera de acuerdo al número de 
+Reynolds. Para Re<2300 se considera laminar y 
+Re>2300 turbulento. 
+Las propiedades del agua emplead as para realizar 
+los cálculos y el análisis numérico son: 
+Tabla 2 : Valores para las pruebas con variación de flujo de 
+entrada. 
+Prueba Temperatura 
+de entrada (K) 
+Flujo de entrada 
+(L/min) 
+Radiación 
+(W/m2) 
+1 293.15 0.5 1000 
+2 293.15 1 1000 
+3 293.15 1.5 1000 
+4 293.15 2 1000 
+5 293.15 2.5 1000 
+6 293.15 3 1000 
+7 293.15 3.5 1000 
+8 293.15 4 1000 
+9 293.15 4.5 1000 
+10 293.15 5 1000 
+Tabla 3: Valores para las pruebas con variación de radiación. 
+Prueba Temperatura 
+de entrada (K) 
+Flujo de entrada 
+(L/min) 
+Radiación 
+(W/m2) 
+1 293.15 2.5 500 
+2 293.15 2.5 600 
+3 293.15 2.5 700 
+4 293.15 2.5 800 
+5 293.15 2.5 900 
+6 293.15 2.5 1000 
+7 293.15 2.5 1100 
+8 293.15 2.5 1200 
+9 293.15 2.5 1300 
+10 293.15 2.5 1400 
+Tabla 4: Valores para las pruebas con variación de  temperatura 
+de entrada. 
+Prueba Temperatura 
+de entrada (K) 
+Flujo de entrada 
+(L/min) 
+Radiación 
+(W/m2) 
+1 278.15 2.5 1000 
+2 283.15 2.5 1000 
+3 288.15 2.5 1000 
+4 293.15 2.5 1000 
+5 298.15 2.5 1000 
+6 303.15 2.5 1000 
+7 308.15 2.5 1000 
+8 313.15 2.5 1000 
+9 318.15 2.5 1000 
+10 323.15 2.5 1000 

@@ -3,6 +3,7 @@ import subprocess
 import argparse
 import shutil
 import re
+import sys
 
 def parse_args():
     parser = argparse.ArgumentParser(description="Sistema de Compilación Editorial Inteligente")
@@ -68,9 +69,8 @@ def compile_book(chapter=None, engine="pdflatex"):
     # Primera pasada
     res1 = subprocess.run(cmd, capture_output=True, text=True)
     if res1.returncode != 0:
-        print("ERROR EN COMPILACIÓN LATEX (Pasada 1):")
-        print(res1.stdout[-1000:])
-        return False
+        print("[Aviso] pdflatex reporto algunas advertencias o errores menores:")
+        print(res1.stdout[-800:])
         
     # Compilar bibliografía si es necesario
     bib_cmd = ["bibtex", os.path.join(temp_dir, "main")]

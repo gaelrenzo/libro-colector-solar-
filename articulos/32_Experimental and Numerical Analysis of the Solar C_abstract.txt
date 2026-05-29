@@ -1,0 +1,174 @@
+--- PAGINA 1 ---
+Citation: Can, O.F.; Celik, N.; Ozgen,
+F.; Kistak, C.; Taskiran, A.
+Experimental and Numerical Analysis
+of the Solar Collector with Stainless
+Steel Scourers Added to the Absorber
+Surface. Appl. Sci. 2024, 14, 2629.
+https://doi.org/10.3390/
+app14062629
+Received: 13 February 2024
+Revised: 15 March 2024
+Accepted: 19 March 2024
+Published: 21 March 2024
+Copyright: © 2024 by the authors.
+Licensee MDPI, Basel, Switzerland.
+This article is an open access article
+distributed under the terms and
+conditions of the Creative Commons
+Attribution (CC BY) license (https://
+creativecommons.org/licenses/by/
+4.0/).
+applied  
+sciences 
+Article
+Experimental and Numerical Analysis of the Solar Collector with
+Stainless Steel Scourers Added to the Absorber Surface
+Omer Faruk Can 1
+ , Nevin Celik 2,*
+ , Filiz Ozgen 3, Celal Kistak 2 and Ali Taskiran 2
+1 Department of Mechanical Engineering, Dicle University, Diyarbakir 21280, Turkey; faruk.can@dicle.edu.tr
+2 Department of Mechanical Engineering, Firat University, Elazig 23119, Turkey; ckistak@firat.edu.tr (C.K.);
+ataskiran@firat.edu.tr (A.T.)
+3 Technology Faculty, Firat University, Elazig 23279, Turkey; fozgen@firat.edu.tr
+* Correspondence: nevincelik23@gmail.com; Tel.: +90-5325212837
+Abstract: In this study, a numerical and experimental analysis of a solar collector with roughness
+elements in the form of stainless-steel scourers on the absorber surface is presented. According
+to the location type and number of the stainless steel scourers, the absorber surfaces are referred
+to as the complex surface (C1), less complex surface (C2), and flat surface (C3). A Computational
+Fluid Dynamics (CFD) analysis was carried out using ANSYS-CFX-R18.2 commercial software. The
+results were verified with the experimental study. After the numerical study was confirmation with
+the experimental study, then the detailed investigation was performed by numerical simulations.
+The extracted results of the numerical and experimental analysis concerned the air temperature
+and velocity, and thermal efficiency, which varied with respect to the type of collector. As a result,
+the C1 type yielded the highest air velocity and air temperature, while the lowest values of air
+velocity and temperature were recorded for the C3 type, according to both the numerical analysis
+and experimental tests. This trend was similar for the efficiencies. The efficiency was nearly 80%
+for collectors with stainless-steel scourers, whilst it was 55% for the flat plate collector. The results
+showed that the experimental and numerical results agreed well.
+Keywords: solar collectors; absorber surface; numerical analysis
+1. Introduction
+When compared to other energy sources, solar energy has drawn a lot of attention as
+a reliable and efficient way to address the growing global energy demand [1]. Photovoltaic
+panels can be used to convert solar energy directly into electricity or heat at different
+temperatures. In addition, it is a clean, free energy source that contributes to reducing
+global warming. But in order to transform solar radiation into usable energy, certain highly
+efficient equipment is required.
+There are various arrangements for solar air collectors. Their inexpensive cost, straight-
+forward structure, and design define them. However, because of their low heat transfer
+coefficient, air solar collectors have low thermal efficiency. Numerous studies have bee n
+carried out to improve this crucial component in order to improve the thermal performance
+of air solar collectors. The absorber plate of the air solar collector has undergone a number
+of changes in an effort to improve heat transfer [2].
+A good method of raising the radiative heat transfer is to add artificial roughness,
+namely surface-enhancing elements that break the laminar sub-layer and cause turbulence
+to occur over the absorber plate. Nonetheless, there are several drawbacks to manufactured
+roughness that are associated with friction losses. Therefore, research on various forms of
+artificial roughness is required, along with optimization of the crucial elements of pressure
+loss and heat transfer. Fins that are inclined, triangular, circular, elliptical, or rectangular
+in shape are among the several geometric shapes and artificial roughness forms that have
+been suggested and studied [1,2].
+Appl. Sci. 2024, 14, 2629. https://doi.org/10.3390/app14062629 https://www.mdpi.com/journal/applsci
+--- PAGINA 2 ---
+Appl. Sci. 2024, 14, 2629 2 of 15
+Kishk et al. [2] presented a novel concept that addresses environmental concerns by
+utilizing recyclable aluminum cans as the absorber plate for an air solar collector. The results
+showed that by adding the cans to the absorber surface, the thermal efficiency increased
+from 25% to 63%. Yadav et al. [ 3] numerically investigated the effect of adding circular
+and semi-circular ribs to the surface of a solar air heater. The results showed that the semi-
+circular rib gives the highest performance. Njomo [4] studied unsteady-state heat exchange
+mechanisms that governed the functioning of a bare single-pass solar collector, using non-
+porous selective absorbers. The derived mathematical model was subsequently utilized to
+forecast the thermal efficiency of this kind of collector. The installation of surface-enhancing
+elements in the form of ribs on the absorber plate under turbulent flow conditions was
+investigated numerically by Chaube et al. [ 5]. It was shown that the heat transfer was
+much improved as compared to a smooth surface. Pashchenko et al. [6] investigated how
+technological and design factors affected the thermal and aerodynamic processes occurring
+in a solar air heater with light-absorbing L-shaped fins. They discovered that the solar air
+heater with fins, had high thermo-aerodynamic characteristics. Karim and Hawlader [7]
+conducted both theoretical and experimental analysis using finned and V-corrugated air
+heaters to enhance the effectiveness of traditional air heaters. Ammar et al. [ 8] created
+a 3D steady-state CFD model of a flat-plate solar air collector with a selective absorber
+under steady-state conditions. They discovered an 81% enhancement in thermal efficiency.
+Badiei et al. [9] developed a 3D CFD transient model of a solar collector with fins that were
+incorporated into the phase change materials. The thermal efficiency increased from 33% to
+46% when using the fins with phase change materials. Panchal et al. [10] presented a report
+related to a performance evaluation of using a tube solar collector with perforated fins. They
+showed that surface-enhancing fins increased the efficiency and hence decreased the cost
+of energy. Saxena et al. [11] presented an experimental study including the modification
+of a solar cooker. It was determined that the modification provided 53 percent efficiency
+compared to the traditional type solar cooker. It was determined that the modification
+provided 53.81% efficiency compared to the conventional solar cooker.
+Overall, the use of surface enhancing elements on the absorber surface of solar collec-
+tors plays a crucial role in maximizing their efficiency and effectiveness in harnessing solar
+energy for heating purposes. Therefore, in this study, we sought to improve the efficiency
+of solar collectors by adding stainless steel scourers on the absorber surface. Since the cost
+of stainless-steel scourers is low, it is very easy to find them around the world, and their
+porous structure is unique. The usability of them in the context of solar collectors as surface
+enhancing elements was investigated in the present study. For this purpose, the effects of
+stainless-steel scourers placed on the absorber surface on air velocity, temperature, and
+collector efficiency have been investigated numerically and experimentally.
+2. Materials and Methods
+2.1. Experimental Study
+The experimental setup was previously used by a co-author of present study [12,13].
+The general setup included a solar air heater, namely a solar collector that was 120 cm
+in length, 80 cm in width, and 40 cm in height. It should be noted that, in order to
+make the values realistic, the dimensions of a frequently sold collector produced by a
+collector company were taken as basis. Its transparent cover, casing material, and insulation
+material consisted of 4 mm-thick window glass, 3 cm-thick Styrofoam, and chipboard wood,
+correspondingly. The collector faced south and was tilted at a 38◦ horizontal inclination.
+Figure 1 depicts a picture of the experimental arrangement.
+As mentioned above, this study aimed to analyze a solar collector system with stainless-
+steel scourers on the absorber surface. Stainless-steel scourers are mostly used in homes
+for cleaning and scrubbing tasks. Three “handfuls” in a packet cost only around USD 1,
+indicating that the inclusion of scourers has no financial impact on the overall collector
+system cost. This substance is structured like metal “swarf”, which is metal cuttings
+from metal turning operations. It has a very regular rectangular cross section, typically
+--- PAGINA 3 ---
+Appl. Sci. 2024, 14, 2629 3 of 15
+400–500 µm by 20–30 µm, and is fashioned into “disks” that fit in the palm of a human
+hand. Since this is a “random structure” material, one must carefully press the material to
+the proper bulk density (or porosity) while accounting for the “rectangular wire’s” actual
+average cross section in order to manage the hydraulic radius [14,15].
+Appl. Sci. 2024, 14, x FOR PEER REVIEW 3 of 15 
+ 
+ 
+Figure 1. Experimental setup. 
+As mentioned above, this study aimed to analyze a solar collector system with stain-
+less-steel scourers on the abso rber surface. Stainless-steel scourers are mostly used in 
+homes for cleaning and scrubbing tasks. Three “handfuls” in a packet cost only around 
+USD 1, indicating that the inclusion of scourers has no ﬁnancial impact on the overall 
+collector system cost. This substance is structured like metal “swarf”, which is metal cut-
+tings from metal turning operations. It has a very regular rectangular cross section, typi-
+cally 400–500 µm by 20–30 µm, and is fashioned into “disks” that ﬁt in the palm of a hu-
+man hand. Since this is a “random structure” material, one must carefully press the mate-
+rial to the proper bulk density (or porosity) while accounting for the “rectangular wire’s” 
+actual average cross section in order to manage the hydraulic radius [14,15]. 
+The most important part of the solar air co llector is the absorber surface. Three dif-
+ferent absorbing surfaces were used in the experimental study. The construction of ab-
+sorber surfaces guarantees the availability of air ﬂow on both sides of the surface to in-
+crease eﬃciency. The absorber surfaces were created using 180 porous steel wool, which 
+was attached to the top and bo ttom of a 1.5 mm-thick galvanized sheet with a type of 
+silicone glue. This sheet was coated with black matte paint to form a surface that absorbs 
+radiation, consistent with the bonding procedure. The ﬁrst of the absorber surfaces con-
+tained 102 scourers in a complex arrangemen t (C1), as displayed in Figure 2a, and the 
+second contained 78 scourers in a regular row (C2), as presented in Figure 2b. No scourer 
+was used on the third absorber surface (C3), as shown in Figure 2c. 
+Figure 1. Experimental setup.
+The most important part of the solar air collector is the absorber surface. Three differ-
+ent absorbing surfaces were used in the experimental study. The construction of absorber
+surfaces guarantees the availability of airflow on both sides of the surface to increase effi-
+ciency. The absorber surfaces were created using 180 porous steel wool, which was attached
+to the top and bottom of a 1.5 mm-thick galvanized sheet with a type of silicone glue. This
+sheet was coated with black matte paint to form a surface that absorbs radiation, consistent
+with the bonding procedure. The first of the absorber surfaces contained 102 scourers in a
+complex arrangement (C1), as displayed in Figure 2a, and the second contained 78 scourers
+in a regular row (C2), as presented in Figure 2b. No scourer was used on the third absorber
+surface (C3), as shown in Figure 2c.
+The experiments were carried out in the city of Elazig, located in the Middle East
+region of Turkey, in a one-month period between the 1st and 30th of July in 2020. The
+measurements were conducted with two air flow rates (0.05 and 0.025 kg/s) and three
+distinct absorber surface geometries (C1, C2, and C3). The inlet and outlet air temperature
+and 4-point surface temperatures were the obtained parameters that were thought to affect
+efficiency. Hence, a comprehensive numerical analysis was performed to obtain more
+information. The following section introduces the numerical analysis.

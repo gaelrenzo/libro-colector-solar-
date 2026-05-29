@@ -1,0 +1,150 @@
+--- PAGINA 1 ---
+Computational fluid dynamics and 
+machine learning integration for 
+evaluating solar thermal collector 
+efficiency -Based parameter 
+analysis
+Xiaoyu Hu1, Lanting Guo2, Jiyuan Wang3 & Yang Liu4
+The present paper provides a novel hybrid computational framework that integrates Computational 
+Fluid Dynamics (CFD) with advanced machine learning techniques to optimize solar thermal collectors 
+employing micro-heat pipe arrays (MHPA) for food dehydration applications. The methodology 
+addresses the fundamental challenge of balancing computational efficiency with prediction accuracy 
+in thermal system design. A validated CFD model generated 935 numerical cases across diverse 
+operational and design parameters, which were used to train and evaluate three machine learning 
+algorithms: linear regression (LR), support vector regression (SVR), and artificial neural networks 
+(ANN). While baseline LR achieved R² = 0.61, optimized SVR and ANN models demonstrated superior 
+performance with R² values of 0.96 and 0.94 respectively. The study identifies a critical transition at 
+100–300 samples where error rates drop sharply, with optimal performance requiring more than 600 
+samples. Entropy analysis quantified information transfer between input parameters and thermal 
+efficiency, identifying MHPA thermal conductivity as the most influential parameter (~ 20% mutual 
+information), followed by air inlet temperature (~ 17%) and air velocity (~ 14%). This information-
+theoretic approach provided clear design priorities by measuring entropy reduction potential of each 
+parameter. Interpretability analysis established optimal operating ranges for key parameters including 
+MHPA equivalent thermal conductivity, power density, glass cover heat transfer coefficient, and air 
+inlet temperature. The hybrid methodology shows promise for efficiently optimizing solar thermal 
+collector designs at lower computational costs than traditional methods to provide valuable insights 
+for solar food drying systems.
+Keywords CFD-ML hybrid model, Entropy optimization, Solar thermal collector
+Solar thermal technology has been considered as a sustainable and energy-efficient solution for food drying 
+processes across various agricultural and food processing applications, which effectively reduces moisture 
+content in fruits, vegetables, and grains. Solar thermal technological applications for drying food can be broadly 
+categorized as direct and indirect solar heating dryers according to the heat transfer working principles. Direct 
+dryers expose food directly to solar radiation, which are simple to manufacture and design. As direct solar dryers 
+allow the food to be exposed directly to sun and wind, it is popularly used for agricultural goods for its simplicity 
+and cost effectiveness. However, this application has limitation of challenges for hygiene and contamination 
+risks1. Indirect solar dryers separate the drying chamber from direct solar exposure, so the ambient air is initially 
+heated by a solar collector system before being directed into a drying chamber to absorb moisture from food 
+items arranged on rack shelves2,3. Indirect solar drying method offers excellent performance by ensuring high-
+quality dried products and shortening drying time4.
+Solar thermal collectors operate by converting solar radiation into thermal energy through selective 
+absorption surfaces5. The fundamental mechanism involves solar radiation passing through a transparent cover, 
+being absorbed by a dark surface, and transferring heat to a working fluid 6,7. Recent advancements in collector 
+design have focused on three main areas: (1) enhanced heat transfer through novel fin geometries and surface 
+1Stevens Institute of Technology, Hoboken, USA. 2University of Illinois Urbana-Champaign, Champaign, USA. 
+3Duke University, Durham, USA. 4Worcester Polytechnic Institute, Worcester, USA. email: harryliu@ieee.org
+OPEN
+Scientific Reports |        (2025) 15:24528 1| https://doi.org/10.1038/s41598-025-10212-w
+www.nature.com/scientificreports
+
+--- PAGINA 2 ---
+treatments8(2) reduced heat losses via improved insulation and selective coatings 6(3) integration of thermal 
+storage elements for extended operation9,10.
+Hybrid systems, which support photovoltaic and thermal collectors, are becoming increasingly important 
+for solar thermal efficiency 11. compares a standard solar water heater with two hybrid systems that integrate 
+thermoelectric generators (TEGs). Using MATLAB finite-difference modeling, researchers found that the hybrid 
+systems improve hot water storage while simultaneously generating electricity through the TEGs, demonstrating 
+clear advantages for energy cogeneration applications.
+Many researchers’ work12–15 reveals that solar thermal collector design is very important factor for improving 
+the overall performance of food drying process. A typical solar thermal collector used in indirect food drying 
+process is depicted in Fig.  1. With the advancement of scientific computing technology, Computational Fluid 
+Dynamics (CFD) has emerged as a pivotal methodology for analyzing and optimizing solar thermal collector 
+performance to help improve the design and efficiency16. studied the temperature variation and air flow velocity 
+under different mass flowrates for sensitivity analysis by using CFD and concluded that CFD is a reliable method 
+to predict solar thermal dryer temperature. Design efforts have been made to improve the absorber plate to 
+increase the solar collector efficiency up to 10%17. CFD has been used to predict the drying uniformity of solar 
+tray design by examining the temperature and velocity profiles18. Similarly, Petros19 developed a commercially 
+available indirect solar dryer through three-dimensional CFD modeling with experiment validation to provide 
+qualitative analysis of temperature and air velocity distribution in the solar chamber. Researchers have also 
+focused on design evaluation and improvement of solar thermal collector 20. found that the thermal efficiency 
+of solar dryer could be improved with the adding the exhaust hot air recirculation. Novel design of reflector is 
+added to a conventional solar thermal collector to improve the thermal efficiency as well as life span of the solar 
+thermal dryer21.
+Innovative configurations of thermal energy storage applications have been extensively explored to enhance 
+the efficiency and performance of solar energy systems. Recent studies have focused on integrating advanced 
+materials and designs to improve heat transfer and storage capabilities. For instance, the performance evaluation 
+of a solar air heater with staggered/longitudinal finned absorber plates integrated with aluminum sponge 
+porous medium has shown significant improvements in thermal efficiency and heat retention 22. Additionally, 
+research on phase change materials (PCMs) storage containers has highlighted various geometries and design 
+considerations that enhance heat transfer rates and storage capacity 23. Experimental investigations have also 
+demonstrated the thermal performance benefits of flat and V-corrugated plate solar air heaters with and without 
+PCMs, underscoring the potential of these configurations in thermal energy storage applications 24. These 
+advancements contribute to the development of more efficient and sustainable thermal energy storage solutions.
+MHPA have been widely utilized in the development of a novel solar thermal collector, which comprises 
+multiple independent micro heat pipes, each featuring an internal design that includes several longitudinal micro 
+fins25,26. This configuration greatly enhances both the heat transfer area and the capillary force. MHPA have the 
+advantage to improve the heat transfer process on the conventional solar thermal collectors. The combined 
+experiment and CFD model to optimize the thermal performance of solar thermal collector with MPHA and 
+evaluated the thermal efficiency under different process conditions and design parameters27.
+MHPA has been successfully applied in solar thermal collectors for indirect heating dryers 28–30. The 
+mechanism and process of a typical MHPA based solar thermal collector is presented in Fig. 2. The solar thermal 
+collector incorporating MHPA technology consists of MHPA heat transfer units with aluminum fins in the 
+condensation region. The collector’s structure includes glass cover, air duct, absorber film, insulation layer, and 
+fins. Within the air duct lies the MHPA ’s condensation section, while its evaporation section is attached to the 
+absorber on the opposite side31. Cold ambient air enters the solar thermal collector with a thin film of absorber 
+on top of MHPA. The absorbed solar thermal energy is transferred to the fins (which is usually made of metal 
+material with high thermal conductivity). Cold ambient air passes through the fins and is heated up before 
+exiting the solar thermal collector for drying food.
+CFD modeling is physics based mathematical programming code to solve complex equations for solutions, 
+which can be time consuming. The advancement of machine learning is capable to overcome this challenge: 
+The application of machine learning conserves time and reveals significant information patterns within a multi-
+dimensional data landscape. This method has gained considerable popularity in the fields of thermal science and 
+food engineering 32 33. The unique advantage of machine learning lies in its capability to model physical processes 
+Fig. 1. Schematic view of thermal collector used in indirect solar thermal collector.
+ 
+Scientific Reports |        (2025) 15:24528 2| https://doi.org/10.1038/s41598-025-10212-w
+www.nature.com/scientificreports/
+--- PAGINA 3 ---
+in intricate systems. Machine learning relies on artificial intelligence using data and algorithms while not 
+necessitate detailed mathematical formulations or extensive experimental trials. When sufficient experimental 
+data is accessible, machine learning can forecast the expected output of a system with high level of accuracy.
+Performance prediction is crucial as it enables optimization of design parameters before physical prototyping, 
+reducing development costs. In addition, accurate performance models facilitate system integration with other 
+renewable energy technologies. The present study addresses this need by developing a hybrid CFD-ML approach 
+that maintains prediction accuracy while drastically reducing computational requirements.
+To better utilize solar thermal collectors for drying food, one needs to consider various aspects of the 
+operational and environmental parameters to maximize the energy efficiency. This present study aims to develop 
+a hybrid model for evaluating and improving the thermal efficiency of a typical solar thermal collector with 
+MHPA for indirect solar dryer by combining CFD and machine learning method. The baseline CFD model 
+will be validated against experiment results in published open literature and a large number of datasets were 
+generated for training machine learning model. The large datasets are capable to provide insights of the impact of 
+different operational and process parameters on the prediction of the thermal efficiency. Then, different machine 
+learning algorithms were applied to build the hybrid model with their accuracy evaluated and optimized.
+Methodology
+Figure 3 presents the workflow diagram of the hybrid CFD-ML methodology for optimizing solar thermal 
+collector efficiency. The process begins with CFD baseline model development and experimental validation, 
+followed by parameter range definition for input variables and thermal efficiency output. After generating 935 
+CFD simulation cases using parallel computing, the workflow splits into two parallel paths: statistical analysis 
+(correlation and parameter impact assessment) and machine learning model development (LR, SVR, and ANN 
+with optimization). Both analytical paths converge to provide comprehensive insights for optimized solar 
+thermal collector performance and thermal efficiency prediction.
+Since MHPA is a proven widely used technique for solar thermal collector for food drying process, a literature 
+paper is selected to establish a baseline CFD model in the study27. The research paper was chosen for two reasons. 
+Firstly, it has been experimentally validated with sufficient measurements, and the secondly, the MHPA design 
+they studied is typically used in many similar solar thermal collectors by recent research25,29.
+The CFD model geometry consists of a single heat-collection unit with six key components: glass cover 
+(modeled as “wall” boundary condition), MHPA (length = 1.75 m, width = 0.08 m, thickness = 0.003 m). air duct, 
+and fins, whose detailed dimensions are listed out in Fig. 4(a), which is referenced from literature referrence27.
+Solar energy first passes through the glass cover and is absorbed by the MHPA, which conducts the heat 
+horizontally. The aluminum fins conduct this heat, reaching higher temperatures. As ambient air flows through 
+the duct and across these heated fins, the thermal energy transfers from the fins to the air. This heated air can 
+then be used for food drying applications, as shown in Fig. 4(b) and (c).
+The study used commercial CFD software ANSYS Fluent Cloud platform with 32 cores for carrying out 
+model simulations. The computational fluid dynamics (CFD) model employs Navier-Stokes equations for 
+incompressible flow. Continuity is enforced through ∇·u = 0, which ensuring mass conservation. Momentum 
+conservation follows:
+ ρ (∂ u
+∂t + u •∇ u)= ∇ p + µ ∇ 2u + ρ g (1)
+Fig. 2. Schematic view of MHPA based solar thermal collector.
+ 
+Scientific Reports |        (2025) 15:24528 3| https://doi.org/10.1038/s41598-025-10212-w
+www.nature.com/scientificreports/

@@ -1,0 +1,244 @@
+--- PAGINA 1 ---
+Ingeniería Mecánica. Vol. 21. No. 3, septiembre-diciembre, 2018, p. 153-160 ISSN 1815-5944 
+Sitio web: http://www.ingenieriamecanica.cujae.edu.cu 153 
+Artículo Original 
+Análisis paramétrico del desempeño térmico de calentadores solares 
+planos de aire de circulación forzada 
+A parametric analysis of thermal performance of plane solar air heaters in 
+forced regime 
+Lenin Pita´-CantosI, Juan José González-BayónII, Alberto Menéndez-PérezII 
+I. Universidad Técnica de Manabí. Facultad de Ciencias Matemáticas, Físicas y Químicas. Portoviejo. Ecuador.
+II. Universidad Tecnológica de la Habana José Antonio Echeverría. Centro de Estudio de Tecnologías 
+Energéticas Renovables. La Habana. Cuba.
+Correo electrónico: lpita@utm.edu.eu 
+Recibido: 4 de enero de 2018 Aceptado: 28 de marzo de 2018  
+Resumen 
+En esta investigación se realizó el análisis del desempeño 
+energético de los colectores solares planos de aire con cubierta 
+simple operando con circulación forzada. Para el análisis se 
+modeló y simuló el colector mediante técnicas de la Dinámica de 
+los Fluidos Computacional, utilizando el código Fluent 6.3. Se 
+analizó el comportamiento del colector ante la variación de los 
+parámetros de diseño (longitud, altura del canal de aire) y de las 
+condiciones de operación (horario del día/ radiación solar incidente 
+y velocidad del aire). Como resultado se obtuvo la dependencia del 
+rendimiento térmico horario y diario del colector, de la temperatura 
+de salida en función de la longitud del colector, la altura del canal, 
+la radiación incidente y la velocidad del aire. Los resultados 
+obtenidos ofrecen a los diseñadores de calentadores solares 
+planos de aire de las herramientas para mejorar el diseño en 
+función del resultado deseado, sea mayor temperatura de aire 
+entregado, mayor rendimiento o alguna combinación de estos 
+parámetros. 
+Palabras claves: calentador solar de aire, convección forzada, 
+rendimiento térmico, desempeño energético. 
+Abstract 
+In this work the analysis of the energetic performance of flat solar 
+air heaters with simple cover operating in forced circulation regime 
+was developed. For the analysis, the collector was modelled and 
+simulated with Computational Dynamic Fluid technique , using the 
+Fluent 6.3code.The collector performance versus the change of 
+design parameters (length, air canal height) and the change of 
+operating conditions (the incident solar radiation and air 
+velocity)was analyzed. The graphic dependence and correlations of 
+hourly and daily collector thermal efficiency, of exit air temperature 
+as function of the collector length, of the air canal height, of the air 
+velocity and of solar incident radiation were carried out. The found 
+correlations are useful for the designers of solar air heaters as tools 
+to improve the design in function of desired aim, either higher exit 
+air temperature, higher efficiency or any combination of these 
+parameters 
+Key words: air solar heater, forced convection, thermal efficiency, 
+energetic performance.
+Introducción 
+Los calentadores solares de aire de placa plana son equipos sencillos que aprovechan la energía solar para 
+el calentamiento de aire. Son empleados esencialmente en procesos que demandan de aire caliente a 
+temperaturas bajas o moderadas (< 60- 70 oC), tales como el suministro de aire caliente para calefacción de
+espacios opara procesos de secado de productos agrícolas e industriales [1-4].Los calentadores solares de 
+aire son dispositivos que no alcanzan altos rendimientos térmicos [5], entre otros factores por el bajo 
+coeficiente de transferencia de calor entre la placa absorbedora y el aire [6]. Este factor determina que, al 
+emplearse calentadores solares para satisfacer las necesidades de aire caliente, comúnmente deban ser 
+empleadas grandes áreas de colección solar. 
+El desarrollo en el área de los colectores solares, se orienta fundamentalmente hacia el mejoramiento de las 
+capacidades de absorción de las superficies absorbedoras, el mejoramiento de la transferencia de calor entre 
+estas superficies y el fluido de trabajo y la reducción de las pérdidas, bien por reflexión a través de la cubierta 
+de cristal empleando superficies antirreflectivas, la aplicación de espacios al vacío y la introducción de 
+pequeños niveles de concentración de la radiación solar [7-9].  
+Son múltiples los parámetros de diseño y otros factores que pueden influir en el comportamiento energético 
+del colector, [10], por ejemplo, el tipo de colector, (sea de un pase de aire, de doble flujo o de dos pases de 
+aire), la longitud del colector, la altura del canal de aire, el tipo de placa absorbedora(sea lisa, corrugada, 
+aleteada o con algún otro tipo de técnica de intensificación de la transferencia de calor), el tipo de cubierta de 
+vidrio(sea sin o con cubierta y en este caso sea simple o doble), etc. Otros factores importantes en el 
+desempeño térmico del colector lo son el tipo de flujo (forzado o natural), el régimen del mismo, (sea laminar o 
+--- PAGINA 2 ---
+ Análisis paramétrico del desempeño térmico de calentadores solares planos de aire de circulación forzada 
+ 
+Ingeniería Mecánica. Vol. 21. No. 3, septiembre-diciembre, 2018, p. 153-160. ISSN 1815-5944 154 
+turbulento), el tipo de material emple ado, el aislamiento, el ángulo de inclinación con que se instala el colector, 
+la radiación solar, las condiciones ambientales, etc. [11,12]. 
+Toda esta variedad de posibles parámetros de diseño y de operación ha determinado que sea elevado el 
+número de mode los teóricos y experimentales desarrollados por los investigadores para tratar de mejorar el 
+desempeño energético del colector.  
+En la investigación de los colectores solares se emplean cada vez más los métodos de CFD (Computational 
+Fluid Dynamics) para el análisis y diseño de colectores solares [12-14]. Los métodos de CFD permiten obtener 
+satisfactorios resultados, validados frente a resultados experimentales, y al mismo tiempopermiten una elevada 
+economía de recursos y de tiempo en la investigación, por l a elevada cantidad de experimentos numéricos que 
+pueden ser realizados con esta técnica con una pequeña penalidad de tiempo y equipamiento.  
+La modelación numérica del colector y la aplicación de estos métodos de CFD permiten abordar el elevado 
+número de posibles calentadores que se derivan de la variación de los parámetros de diseño y de operación en 
+determinados intervalos. 
+El objetivo de este artículo es realizar el análisis del desempeño térmico de los calentadores solares planos 
+de aire de cubierta sim ple operando en régimen de circulación forzada. El análisis se realiza variando los 
+diferentes parámetros de diseño y lascondiciones de operación (entiéndase a diferentes horas del día o 
+diferentes valores de la radiación incidente). Los colectores son evaluados a partir de la modelación numérica y 
+la simulación, mediante el software FLUENT. Los resultados esperados podrán ser usados por los diseñadores 
+y operadores de sistemas de colectores para poder prever la temperatura de salida del aire y el rendimien to 
+térmico del dispositivo ante un conjunto de parámetros de diseño y condiciones de operación dadas. 
+Métodos y Materiales  
+El dominio de flujo consiste de un sector de colector solar plano para calentamiento de aire formado por un 
+emparedado compuesto de una placa de vidrio de 5  mm de espesor como cobertura, a continuación, en 
+sentido descendente se halla una capa de aire de altura e, seguida de la placa absorbedora plana de 3 mm de 
+espesor y finalmente una capa de material aislante de 3 cm de espesor. 
+Como el estudio pretende analizar el comportamiento de los colectores en función de sus parámetros de 
+diseño, el dominio computacional se definirá para colectores con diferentes alturas del canal de aire e = 3 cm, 5 
+cm, 7,5 cm y 10 cm y diferentes valores de l ongitud del colector L = 1 m, 1,5 m y 2 m. El ancho del dominio se 
+adoptó con un valor de 200 mm. La inclinación del colector θ se tomó igual a 30º.El aire circulará en el colector 
+por convección forzada penetrando por la parte inferior y saliendo por el e xtremo superior del colector.La 
+configuración de colector es mostrada en la figura 1. 
+ 
+Fig. 1. Esquema del dominio de flujo considerado para el calentador solar de aire 
+Para el análisis  son adoptadas las siguientes consideraciones: 1) El aire es un medio continuo e 
+incompresible. 2) Las propiedades termo-físicas del vidrio, de la placa absorbedora y del aislante se consideran 
+constantes para toda temperatura dentro del intervalo de operación.  3) El flujo de aire es estacionario y posee 
+características de flujo turbulento.4) El aislante solo intercambia calor con el  ambiente exterior por convección, 
+mientras la cubierta de vidrio intercambia calor con el ambiente por convección y por radiación. 5) Las 
+superficies de las caras del vidrio, de la placa absorbedora y del aislante correspondientes a la entrada y a la 
+salida del aire se consideran adiabáticas. 
+Modelo numérico 
+La simulación numérica se realiza con un solucionador 3D, estacionario, implícito, basada en presión usando 
+el código Fluent 6.3. Las ecuaciones diferenciales parciales que gobiernan los procesos, o sea, las ecuaciones 
+de la masa, de la cantidad de movimiento y de la energía son resueltas para condición estacionaria. Para el 
+acoplamiento presión-velocidad es usado el algoritmo SIMPLE. La discretización usada para la presión es el 
+esquema STANDARD, mientras que, para la energía, la cantidad de movimiento y la turbulencia se emplea un 
+esquema UPWIND de segundo orden. Para incorporar la radiación solar al modelo se emplea el modelo de 
+carga solar (Solar RayTracing) del propio Fluent 6.3. 
+
+--- PAGINA 3 ---
+Lenin Pita Cantos, Juan José González Bayón, Alberto Menéndez Pérez 
+ 
+Ingeniería Mecánica. Vol. 21. No. 3, septiembre-diciembre, 2018, p. 153-160. ISSN 1815-5944 155 
+El calculador solar se aplicó para determinar la irradiación solar para el día seleccionado como base para la 
+experimentación numérica, el 21 de junio, e n las coordenadas correspondientes a los  22. 5º de latitud norte y 
+81, 5º de longitud oeste, que corresponde a la provincia Matanzas en Cuba.  El análisis fue desarrollado para el 
+intervalo horario entre 8:00 am y 5:00 pm. 
+Ecuaciones del flujo 
+Las ecuaciones a resolver son: la ecuación de continuidad, de la cantidad de movimiento y de la energía, las 
+cuales son presentadas en las ecuaciones 1, 2 y 3 en coordenadas cartesianas y notación tensorial. 
+Ecuación de continuidad: 
+0
+ )u(x i
+i
+
+ (1) 
+Ecuación de cantidad de movimiento: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ´u´ux
+u
+x
+u
+xx
+p)uu(x ji
+i
+j
+j
+i
+ji
+ji
+i
+
+ (2) 
+Ecuación de energía: 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+jt
+t
+j
+i
+i x
+T
+PrPrx)Tu(x
+
+ (3) 
+Método de solución 
+Esquema numérico 
+El dominio computacional tridimensional es modelado usando una malla de elementos de tipo hexaédri cos, 
+tal como se muestra en la f igura 2. El dominio completo contempló un mallado que osciló entre 200000 y 
+400000 elementos dependiendo de l largo y espesor  del modelo. El dominio mallado incluye la cubierta de 
+vidrio, el medio fluido (aire), la placa absorbedora y el aislante. La malla se realizó diferenciada en cada región, 
+en el aire se consideró un mayor refinamiento de la malla en la dirección de la altura  del canal  de aire. El 
+mallado en este caso se realizó con un paso creciente desde ambas superficies (vidrio y plac a) hacia el centro 
+de la capa, de manera de tener un mayor refinamiento en las zonas de mayores gradientes. Para chequear la 
+validez de la malla a é sta se le realizó el examen de independencia de la malla. Se verificó que un mayor 
+refinamiento de la malla no cambie la solución en más que 0,4 %, lo cual es considerado como una calidad 
+adecuada de la malla para fines computacionales. 
+ 
+Fig. 2. Vista ampliada de una región de la malla del dominio computacional 
+Las ecuaciones de conservación fueron resueltas sobre el volumen de control para obtener los campos de 
+velocidad y de temperatura para el flujo de aire y los campos de temperatura en la placa absorbedora, el vidrio 
+y el aislante. La convergencia de las sol uciones fue considerada alcanzada cuando los residuos de la 
+continuidad fueron inferiores a 10-4 y los residuos del resto de las ecuaciones fueron inferiores a 10 -7 en todo el 
+dominio computacional. 
+Condiciones de contorno y parámetros de operación 
+Las condiciones de contorno colocadas al dominio computacional se corresponden con las condiciones de 
+frontera físicas del colector. Las condiciones de contorno impuestas al aire fueron: en la entrada del aire 
+Velocity Inlet y en la salida del aire Pressure Outlet. En el modelo viscoso, las superficies de contacto entre 
+aire-placa absorbedora y entre aire -vidrio se consideró condición de contorno de Wallcon componentes de 
+velocidad cero, es decir, adherencia e impermeabilidad. 
+A todos los límites de los sólidos se  les colocó condición de Wallcon condiciones térmicas diferentes. Las 
+superficies de entrada y las superficies de salida del vidrio, de la placa y del aislante se tomaron adiabáticas. 
+La pared inferior del aislante se consideró Pared con convección y se impuso la temperatura del aire ambiente 
+exterior y el coeficiente de transferencia de calor por convección. La pared superior del vidrio se consideró 
+pared con transferencia de calor Mixta (convección y radiación), nuevamente se impuso el coeficiente de 
+transferencia del calor por convección, la temperatura del aire ambiente y la temperatura de radiación exterior. 
+

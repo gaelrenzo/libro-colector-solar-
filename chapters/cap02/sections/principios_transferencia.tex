@@ -2,7 +2,15 @@
 \section{Principios de transferencia de calor}
 \label{sec:cap02_principios_transferencia}
 
-Este apartado expone detalladamente los aspectos fundamentales de principios de transferencia de calor para el colector solar de aire.
-El análisis del comportamiento termo-fluidodinámico requiere la formulación de ecuaciones constitutivas específicas.
-Se consideran condiciones de frontera realistas para aproximar el modelo a un escenario industrial real.
-Los parámetros resultantes serán fundamentales para el proceso de validación cruzada entre modelos teóricos y numéricos.
+La conducción de calor en medios sólidos está regida por la ley de Fourier, donde el flujo es proporcional al gradiente de temperatura.
+En el colector, la conducción ocurre principalmente a través de la chapa absorbedora y los espesores del aislante de poliuretano expandido.
+La convección de calor entre la placa y la corriente de aire está descrita por la ley de enfriamiento de Newton.
+El coeficiente convectivo depende fuertemente de las propiedades termo-físicas del aire y de la velocidad del flujo.
+La transferencia por radiación de onda larga entre la placa absorbedora caliente y la cubierta de vidrio es un mecanismo importante de pérdida.
+Esta radiación sigue la ley de Stefan-Boltzmann corregida por la emisividad e inductancias de las superficies involucradas.
+
+\begin{cajainfo}{Ecuación Convectiva de Newton}
+El flujo de calor convectivo útil se expresa matemáticamente mediante la siguiente ecuación:
+q_c = h \cdot (T_p - T_f)
+Donde h es el coeficiente de transferencia de calor, Tp es la temperatura de la placa y Tf la del fluido.
+\end{cajainfo}

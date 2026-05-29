@@ -1,0 +1,337 @@
+--- PAGINA 1 ---
+Engineering, Technology & Applied Science Research  Vol. 12, No. 5, 2022, 9282-9294  9282  
+ 
+www.etasr.com Guerraiche et al.: Heat Transfer Enha ncement in a Receiver Tube of Solar Collector Using Various … 
+ 
+Heat Transfer Enhancement in a Receiver Tube of 
+Solar Collector Using Various Materials and 
+Nanofluids 
+ 
+Djemaa Guerraiche 
+Applied Energy Physics Laboratory (LPEA) 
+Department of Physics 
+Faculty of Matter Sciences 
+University of Batna 1 
+Batna, Algeria  
+d.guerraiche@gmail.com 
+Khelifa Guerraiche  
+Mechanical Engineering Department 
+Faculty of Technology 
+University of Batna 2 
+Batna, Algeria 
+guer.khelifa@yahoo.com 
+Zied Driss 
+Laboratory of Electromechanical Systems (LASEM) 
+National School of Engineers of Sfax (ENIS) 
+University of Sfax, Sfax, Tunisia 
+zied.driss@enis.tn 
+Atef Chibani  
+Department of Chemical Engineering 
+University Salah Boubnider Constantine 3 
+Constantine, Algeria 
+chibaniatef@gmail.com 
+Slimane Merouani 
+Department of Chemical Engineering 
+University Salah Boubnider Constantine 3 
+Constantine, Algeria 
+s.merouani@yahoo.fr 
+Cherif Bougriou 
+Mechanical Engineering Department 
+Faculty of Technology, University of Batna 2 
+Batna, Algeria 
+c.bougriou@univ-batna2.dz 
+ 
+Received: 21 July 2022 | Revised: 5 August 2022 | Accepted: 8 August 2022 
+ 
+Abstract-The solar flux distribution on the Parabol ic Trough 
+Collector (PTC) absorber tube is extremely non-unif orm, which 
+causes non-uniform temperature distribution outside  the 
+absorber tube. Therefore, it generates high thermal  stress which 
+causes creep and fatigue damage. This presents a ch allenge to the 
+efficiency and reliability of parabolic trough rece ivers. To 
+override this problem, we have to homogenize the he at flux 
+distribution and enhance the heat transfer in the r eceiver’s 
+absorber tube to improve the performance of the PTC . In this 
+work, 3D thermal and thermal stress analyses of PTC  receiver 
+performance were investigated with a combination of  Monte 
+Carlo Ray-Trace (MCRT), Computational Fluid Dynamic s 
+(CFD) analysis, and thermal stress analysis using t he static 
+structural module of ANSYS. At first, we studied th e effect of the 
+receiver tube material (aluminium, copper, and stai nless steel) on 
+heat transfer. The temperature gradients and the th ermal 
+stresses were compared. Second, we studied the effe ct of the 
+addition of nanoparticles on the working Heat Trans fer Fluid 
+(HTF), employing an Al 2O3-H2O based nanofluid at various 
+volume concentrations. To improve the thermal perfo rmance of 
+the PTC, a nanoparticle volume concentration ratio of 1%–6% is 
+required. The results show that the temperature gra dients and 
+thermal stresses of stainless steel are significant ly higher than 
+those of aluminium and copper. From the standpoint of thermal 
+stress, copper is recommended as the tube receiver material. 
+Using Al 2O3 in water as an HTF increases the average output 
+temperature by 2%, 6%, and 10% under volume concent rations 
+of 0%, 2%, and 6% respectively. The study concluded  that the 
+thermal efficiency increases from 3% to 14% for nan oparticle 
+volume fractions ranging from 2% to 6%. 
+Keywords-heat transfer; nanofluids; solar concentra tor; 
+receiver; non-uniform heat flux; temperature gradients 
+I.  INTRODUCTION  
+The use of renewable energies has become essential to the 
+reduction of the consumption of fossil resources an d the 
+production of carbon dioxide (CO 2), which is the main gas 
+responsible for the greenhouse effect. The technolo gy of 
+Concentrated Solar Power (CSP) can meet the demands  for 
+thermal and electrical energy. The benefits of usin g a CSP 
+technology with a PTC system are: it is best suited  for a wide 
+range of industrial applications and can contribute  to thermal 
+energy production, which can have significant econo mic, 
+environmental, and social implications [1]. Recentl y, the PTC 
+has been developing towards a higher concentration ratio and 
+operating temperature for the purposes of reducing the 
+Corresponding author: Djemaa Guerraiche 
+--- PAGINA 2 ---
+Engineering, Technology & Applied Science Research  Vol. 12, No. 5, 2022, 9282-9294  9283  
+ 
+www.etasr.com Guerraiche et al.: Heat Transfer Enha ncement in a Receiver Tube of Solar Collector Using Various … 
+ 
+investment cost and improving its thermal efficienc y, 
+especially at high temperatures. This is an importa nt goal in 
+order for these technologies to be energetically an d financially 
+viable [2]. However, the PTC suffers from several p roblems 
+and failures, especially concentrated solar Non-Uni form Heat 
+Flux (NUHF) distribution on the outer surface of th e absorber 
+tube. In addition, the heat flux is small near the top wall where 
+the collimated energy is incident and is large near  the bottom 
+wall [3]. NUHF causes high local temperature and bi g 
+temperature gradient in solar receivers due to the restricted 
+thermal conductivity of the receiver tube and the t hermal 
+convection capacity inside the tube, producing an i ncrease in 
+thermal stress. This causes the absorber tube to de viate from 
+the focal plane and large increase in optical losse s because the 
+selective coating degrades when the local temperatu re is too 
+high, limiting the maximum working temperature. All  these 
+issues represent challenges that will have a long-t erm impact 
+on the PTC's efficiency and safety [4]. Authors in [5] 
+discovered that the maximum temperature differentia l for safe 
+functioning of receiver tubes is around 50K. Furthe rmore, 
+strong temperature gradients have many repercussion s 
+circumferentially, which may be summed by the defle ction of 
+the absorber tube. This causes the absorber tube to deviate from 
+the concentrator's focus line, causing optical loss . When the 
+local temperature is too high, the selective coatin g degrades, 
+limiting the maximum operating temperature. As a result of the 
+thermal breakdown of the HTF, hydrogen production a nd 
+penetration occur [6], resulting in increasing heat loss, material 
+degradation, heat stress, and deformation of the ab sorber tube. 
+These pose significant obstacles to the concentrate d solar 
+system's safe and efficient functioning. To solve t his issue, we 
+must homogenize the heat flow distribution by flatt ening the 
+temperature distribution, lowering the peak temperature and the 
+temperature gradient. Recent studies have concentra ted on 
+improving thermal transfer and thermal distribution uniformity. 
+A simple solution to flattening the temperature distribution is to 
+homogenize the flow distribution. Heat transfer enh ancement 
+technology can reduce thermal losses and thermal st ress while 
+increasing heat transfer rates between the absorber  tube and 
+HTF at a low cost. The solutions can be roughly cla ssified into 
+three groups: Improvements to the tube's thermal co nductivity, 
+collector optimization to homogenize solar energy, and 
+augmentation of convective heat transfer within the  absorber 
+tube [7]. 
+Receiver tubes are subjected to a harsh operating 
+environment. To alleviate the extreme operating conditions and 
+ensure the receiver's durability, dependability, an d integrity 
+throughout its lifecycle, special consideration was  required 
+when selecting the receiver material. High corrosion resistance, 
+optimal physical and mechanical properties, excelle nt 
+fabricability, and a higher capacity for flux densi ty are all 
+critical criteria. Several solutions have been adop ted by 
+enhancing the thermal conductivity of the absorber tube and 
+employing an absorber with thermal compensator and heat 
+transfer improvement techniques [8]. Using selective materials, 
+solution techniques aimed to improve the thermal co nductivity 
+of the absorber tube have been proposed for the PTC  receiver. 
+Authors in [9] conducted a structural and thermal a nalysis of a 
+PTC absorber tube to investigate the effect of mate rial 
+variations on temperature distribution flattening. Steel, copper, 
+aluminium, and bimetallic materials (Cu-Fe) have be en 
+investigated. They concluded that when using copper , the 
+circumferential temperature non-uniformity was less  bending 
+due to less thermal load than using steel. Using a bimetallic 
+tube improves temperature distribution and reduces maximum 
+deflection by 45–49%. Authors in [2] presented an 
+experimental investigation in which the steel tube was replaced 
+with a copper tube. The reduced bending of the abso rber tube 
+was caused by the lower circumferential temperature variations 
+due to copper's strong thermal conductivity. 
+II.  H
+OMOGENIZING SOLAR FLUX DISTRIBUTION  
+A more straightforward way to flatten the temperatu re 
+distribution appears to be the homogenization of th e flux 
+distribution. Several researchers proposed innovati ve 
+concentrators for flux homogenization. The heat flo w gradient 
+in the absorber tube must be reduced and homogenize d. 
+Authors in [10] proposed improvements based on the 
+conventional PTC and a secondary reflector was adde d 
+overhead the tube. The numerical results showed tha t the heat 
+flux gradient was reduced by 70.37%, and the temper ature 
+gradient from 159.39K to 24.16K. Authors in [11] us ed a 
+variable focus PTC, in which the focal length varie d as a 
+function of the reflector's motion relative to the receiver, 
+significantly enhanced the flux distribution's homo geneity. 
+Authors in [12] placed a secondary reflector within  the annular 
+gap in order to reflect more sun rays onto the top of the 
+absorber. Authors in [13] investigated the heat flux distribution 
+on the outside surface of the PTC absorber tube in order to 
+lower the tube's temperature gradient by relocating the absorber 
+tube away from the focal line and toward the parabo la and 
+adding a secondary reflector. The results show that  installing 
+another reflector overhead the absorber tube improv es the heat 
+flux distribution and reduces heat flux gradient by 70.37%. 
+III.  H
+EAT TRANSFER ENHANCEMENT AND OPTIMIZATION  
+Heat transfer improvement might result in a more un iform 
+temperature distribution in the metal tube, reducin g thermal 
+deformation in the receiving tube. For the PTC rece iver, a 
+number of strategies for enhancing convective heat transfer 
+have been proposed. Authors in [14] used an absorbe r with a 
+thermal compensator at the parabolic dish concentra ted solar 
+receiver, which contains a Phase Change Material (P CM) to 
+produce uniform heat distribution. Thermal performa nce is 
+improved by using PCMs as thermal energy storage. 
+Homogeneous temperature distribution was observed o n the 
+PCM integrated receiver in the absence of solar rad iation. A 
+non-uniform temperature distribution was discovered  during 
+the charging of the PCM included within the solar r eceiver. 
+Authors in [15] presented a novel PTC receiver desi gn based 
+on a concentric absorber tube filled with PCM. The absorber 
+was regarded as a component of transitory thermal heat storage. 
+The results validated the suggested design and veri fied that 
+combining PTC and PCM in the receiver peripheral ca n 
+improve the thermal performance of the provided sys tem. In 
+[16], for solar cascade heat collection, a new PTC with a 
+concentric receiver tube based on two HTFs, Sylther m-800 oil, 
+was presented. The findings revealed that the absor ber tube's 
+peak temperature and circumferential temperature gr adient 
+--- PAGINA 3 ---
+Engineering, Technology & Applied Science Research  Vol. 12, No. 5, 2022, 9282-9294  9284  
+ 
+www.etasr.com Guerraiche et al.: Heat Transfer Enha ncement in a Receiver Tube of Solar Collector Using Various … 
+ 
+were lower than regular PTC at the same mass flow r ate. The 
+absorber tube's maximum temperature and temperature  
+difference lowered to 66K and 65K respectively. For  the PTC 
+receiver, several strategies for improving convecti ve heat 
+transfer have been proposed. This technology employ s helical 
+swirl generators, treated areas, vortex generators,  displacement 
+increase devices, extended surfaces, jagged surface s, and 
+nanoparticles [17]. According to these studies, the  peak 
+temperature and temperature gradient can be minimiz ed. In 
+[18], the impact of swirl inserts with and without nanofluids on 
+PTCs with non-uniform heating flux was examined. The results 
+showed that combining the swirl inserts and nanoflu ids 
+improved the Nusselt number by 57.4% while the maxi mum 
+reduction in thermal losses was 23%. The Nusselt nu mber, on 
+the other hand, was enhanced by 15.57% when utilizi ng 
+nanofluid only. 
+The working fluid is one of the most important components 
+of a solar receiver since it plays an important rol e in heat 
+transmission. During the last 25 years, nanotechnol ogy has 
+found applications in solar energy production. The use of 
+nanofuids has transformed material science, and they have been 
+used as potential alternative fluid solutions for i ncreasing the 
+efficiency and profitability of thermal systems. Ad ding 
+nanoparticles to the heating fluid presents the bes t solution to 
+improve thermal conductivity and thermo-physical an d heat 
+transfer properties of the fluid [19]. In fact, nan ofluids have a 
+favorable effect on the performance of the PTC. The  heat 
+transfer performance obtainable with nanofluids is known to 
+surpass the performance of heat transfer liquids available today 
+[20]. The most used nanofluids contain nanoparticle s such as 
+Al, Fe 2O3, Al 2O3, Cu, TiO 2, and SiO 2 [21]. Some studies on the 
+use of nanofluids for solar energy harvesting are a vailable in 
+the literature. For example, authors in [22] invest igated the 
+application of nanofluids in concentrating a solar PTC. The 
+effect of several nanofluids employed as working fl uid on the 
+performance of solar thermal collectors was studied  
+experimentally. Authors in [23] discussed the progr essive 
+application of nanofluids in solar collectors with different 
+thermophysical properties. In addition, they evalua ted the 
+performance of different types of solar collectors.  Authors in 
+[24] proposed a mathematical model for the investigation of the 
+effect of nanofluid concentration on PTC. They foun d that 
+using nanofluids in a PTC improves its thermal effi ciency. 
+Authors in [25] presented an experimental study of the heat 
+transfer and friction factor of silver nanofluids i n a PTC 
+receiver with twisted tape inserts. They confirmed that using 
+nanofluids increases the heat transfer performance of the 
+receiver. Authors in [26] confirmed that the perfor mance of 
+concentrating solar thermal systems with a nanoflui d as 
+working fluid has an excellent potential for power tower 
+applications improving efficiency by 5%–10%. Authors in [27] 
+investigated the performance of nanofluids on PTC s ystems 
+and improved the efficiency by at least 5% [27]. Au thors in 
+[28] presented an experimental study to evaluate th e thermal 
+efficiency of a PTC using nanoparticles of alumina (Al 2O3) in 
+water with a volume fraction of 1% and 3% as HTF. T he 
+results showed that with nanofluid as working fluid , the 
+maximum efficiencies were 52.4% and 57.7%, while for water, 
+these efficiencies were 40.8% and 46.5% for 3% and 1% 
+volume fraction respectively. PTC thermal enhanceme nt has 
+recently attracted considerable attention. The enha ncement of 
+PTC performance can be achieved by modifying the ma terial, 
+modifying the geometry, and using nanofluids instea d of 
+conventional base fluids. Even so, utilizing nanofluids on PTCs 
+provided a positive result. These results are still  facing several 
+breaking points in the method of using a HTF [29]. Finding the 
+optimal configuration of various parameters, such a s receiver 
+formation and geometry, receiver size and material,  HTF, and 
+regulation of the maximum heat flow, is one of the most 
+challenging and important research purposes for enh anced 
+thermal systems to further improve efficiency and p rofitability 
+through innovation in design and application of new  fluids and 
+new materials. 
+This work presents a three-dimensional numerical st udy of 
+the thermal and thermal stress performance of a PTC . In order 
+to attain this goal, the suggested approach consists of two main 
+steps. The impact of the absorber tube material on heat 
+transmission was investigated in the first step. The performance 
+of PTC receivers was studied using a combination of  Monte 
+Carlo Ray-Trace (MCRT), Computational Fluid Dynamic s 
+(CFD) simulation using Ansys Fluent software, and t hermal 
+stress analysis using ANSYS' static structural modu le. We will 
+solve the temperature distributions in the heat transfer analysis, 
+and the thermal stress analysis will use the interp olated 
+temperature distributions specified at the nodes of  the CFD 
+meshes as input data for the nodes. A comparative s tudy of 
+numerous materials, such as copper, aluminum, and s tainless 
+steel, is employed and compared to find which is id eal for a 
+small-sized PTC under actual NUHF. Second, the effe ct of the 
+addition of nanoparticles on the working fluid, emp loying 
+Al 2O3-H2O based nanofluid at various volume concentrations is 
+carried out. The computational model is developed i n Ansys 
+Fluent environment. 
+IV.  PHYSICAL MODEL  
+Figure 1 shows the physical model considered in thi s work. 
+The PTC system consists of a mirror folded into a p arabolic 
+shape with a heat collecting element at its focus. In the 
+numerical study, the rim angle ( ϕr) of the collector is 90° and 
+the total aperture area (Ap = W×L) is 1.80m 2. The receiver of 
+the parabolic trough solar collector consists of a metallic tube 
+that is enclosed in a glass envelope. The absorber tube is coated 
+with a selective coating that has a high absorptivi ty of the 
+incoming solar radiation and a low emissivity of in frared 
+radiation. The geometrical dimensions and optical properties of 
+the PTC system are defined in Table I. In this work , a three-
+dimensional analysis of the thermal losses and ther mal stress 
+performance of a solar PTC receiver was investigate d through 
+studying the influence of the receiver tube, materi al type, and 
+the nanofluid used as the working fluid. To improve  the 
+thermal performance of the PTC and homogenize the f lux 
+distribution for flattening the temperature distrib ution, various 
+types of materials were used for the receiver heat transfer 
+enhancement, namely copper, stainless steel, alumin ium, and 
+water containing nanoparticles of Al 2O3. 321H stainless steel 
+was used for the absorber tube due to its low bendi ng behavior 
+and high strength capability [30]. The thermal prop erties of 
+absorber materials are given in Table II. In these conditions, the 
