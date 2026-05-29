@@ -4,169 +4,576 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín</title>
+    <!-- Google Fonts para tipografía premium -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --deep-navy: #163657;
             --teal-accent: #008080;
-            --dark-charcoal: #1e1e1e;
-            --light-gray: #f5f7fa;
-            --text-light: #ffffff;
-            --text-dark: #2c2c2c;
+            --orange-warning: #ff8c00;
+            --dark-bg: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-secondary: #94a3b8;
+            --teal-gradient: linear-gradient(135deg, #008080 0%, #00b3b3 100%);
+            --navy-gradient: linear-gradient(135deg, #163657 0%, #0c2035 100%);
+            --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
         }
 
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
-            background-color: var(--dark-charcoal);
-            color: var(--text-light);
+            background-color: var(--dark-bg);
+            color: var(--text-main);
+            font-family: 'Plus Jakarta Sans', sans-serif;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
+        /* Encabezado Premium con gradiente y efecto de cristal */
         header {
-            background: linear-gradient(135deg, var(--deep-navy) 0%, #0c2035 100%);
-            padding: 4rem 2rem;
+            background: linear-gradient(180deg, rgba(22, 54, 87, 0.8) 0%, rgba(15, 23, 42, 0.95) 100%), 
+                        radial-gradient(circle at top right, rgba(0, 128, 128, 0.3), transparent 400px);
+            padding: 5rem 2rem 4rem;
             text-align: center;
-            border-bottom: 4px solid var(--teal-accent);
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--teal-gradient);
         }
 
         header h1 {
-            font-size: 2.8rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
             font-weight: 700;
-            color: var(--text-light);
+            color: #ffffff;
             margin-bottom: 1rem;
             letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         header p {
-            font-size: 1.3rem;
-            color: #b0c4de;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .repo-badge {
+            display: inline-flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .repo-badge:hover {
+            background-color: rgba(0, 128, 128, 0.15);
+            border-color: var(--teal-accent);
+            transform: translateY(-2px);
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 3rem auto;
             padding: 0 2rem;
         }
 
-        .card {
-            background-color: #2a2a2a;
-            border-radius: 12px;
-            padding: 2.5rem;
-            margin-bottom: 2rem;
-            border-left: 5px solid var(--teal-accent);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        h2 {
-            color: var(--teal-accent);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #444;
-            padding-bottom: 0.5rem;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        li {
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #3a3a3a;
+        /* Sección Libro Completo */
+        .featured-card {
+            background: var(--navy-gradient);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            margin-bottom: 4rem;
+            box-shadow: var(--glass-shadow);
+            position: relative;
+            overflow: hidden;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
         }
 
-        li:last-child {
-            border-bottom: none;
+        .featured-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(0, 128, 128, 0.15);
+            filter: blur(80px);
+            border-radius: 50%;
         }
 
-        .chap-num {
-            background-color: var(--deep-navy);
-            color: var(--text-light);
-            padding: 0.2rem 0.6rem;
-            border-radius: 4px;
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-right: 1rem;
+        .featured-info {
+            max-width: 650px;
+            z-index: 1;
         }
 
-        .chap-title {
-            flex-grow: 1;
+        .featured-info h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .featured-info p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .badge-disponibilidad {
+            display: inline-block;
+            background-color: rgba(0, 128, 128, 0.2);
+            color: #00e6e6;
+            border: 1px solid rgba(0, 128, 128, 0.4);
+            padding: 0.25rem 0.75rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
         }
 
         .btn {
-            display: inline-block;
-            background-color: var(--teal-accent);
-            color: var(--text-light);
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--teal-gradient);
+            color: #ffffff;
+            padding: 0.85rem 2rem;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            margin-top: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: none;
+            cursor: pointer;
+            z-index: 1;
+            box-shadow: 0 4px 15px rgba(0, 128, 128, 0.3);
         }
 
         .btn:hover {
-            background-color: #006666;
-            box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 128, 128, 0.5);
+            background: linear-gradient(135deg, #009999 0%, #00cccc 100%);
+        }
+
+        /* Cuadrícula de Capítulos por Módulos */
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--teal-accent);
+            margin: 0.75rem auto 0;
+            border-radius: 5px;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+
+        .chapter-card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(10px);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(0, 128, 128, 0.3);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            background-color: rgba(30, 41, 59, 0.85);
+        }
+
+        .chapter-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.25rem;
+        }
+
+        .chapter-num {
+            font-family: 'Outfit', sans-serif;
+            background-color: rgba(22, 54, 87, 0.5);
+            border: 1px solid rgba(22, 54, 87, 0.8);
+            color: #60a5fa;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+        }
+
+        .status-badge {
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+        }
+
+        .status-disponible {
+            background-color: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .status-proceso {
+            background-color: rgba(245, 158, 11, 0.15);
+            color: #fbbf24;
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+
+        .chapter-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            color: #ffffff;
+            margin-bottom: 0.75rem;
+        }
+
+        .chapter-card p {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .btn-sm {
+            padding: 0.6rem 1.2rem;
+            font-size: 0.85rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        .btn-disponible {
+            background-color: rgba(0, 128, 128, 0.1);
+            color: #00e6e6;
+            border: 1px solid rgba(0, 128, 128, 0.4);
+        }
+
+        .btn-disponible:hover {
+            background-color: var(--teal-accent);
+            color: #ffffff;
+        }
+
+        .btn-bloqueado {
+            background-color: rgba(255, 255, 255, 0.02);
+            color: rgba(255, 255, 255, 0.25);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            cursor: not-allowed;
+            pointer-events: none;
+        }
+
+        /* Sección de Colaboradores */
+        .team-section {
+            background-color: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 3rem;
+            box-shadow: var(--glass-shadow);
+            margin-bottom: 4rem;
+        }
+
+        .team-section h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+        }
+
+        .team-section p {
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .team-card {
+            background-color: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            padding: 1.5rem;
+            border-radius: 10px;
+        }
+
+        .team-card h4 {
+            font-family: 'Outfit', sans-serif;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-card code {
+            display: block;
+            background-color: #000000;
+            padding: 0.5rem;
+            border-radius: 6px;
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: #38bdf8;
+            margin-top: 0.75rem;
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
         footer {
             text-align: center;
-            padding: 3rem;
-            color: #777;
+            padding: 4rem 2rem;
+            color: #64748b;
             font-size: 0.9rem;
-            background-color: #1a1a1a;
-            margin-top: 5rem;
-            border-top: 1px solid #333;
+            background-color: #0b0f19;
+            border-top: 1px solid var(--border-color);
+        }
+
+        footer p {
+            max-width: 600px;
+            margin: 0 auto;
         }
     </style>
 </head>
 <body>
     <header>
         <h1>Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín</h1>
-        <p>Un sistema editorial técnico profesional, modular y automatizado con control de versiones integrado.</p>
+        <p>Sistema Editorial Técnico Científico Modular y Automatizado en la Nube</p>
+        <a href="https://github.com/gaelrenzo/libro-colector-solar-" class="repo-badge" target="_blank">
+            <svg style="margin-right: 8px;" height="16" viewBox="0 0 16 16" width="16" fill="currentColor">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+            </svg>
+            Repositorio GitHub del Libro
+        </a>
     </header>
 
     <div class="container">
-        <div class="card">
-            <h2>Estructura del Libro Técnico</h2>
-            <ul>
-                <li><span class="chap-num">Cap 01</span><span class="chap-title">Introducción y Objetivos</span></li>
-                <li><span class="chap-num">Cap 02</span><span class="chap-title">Fundamentos de Transferencia de Calor y Dinámica de Fluidos</span></li>
-                <li><span class="chap-num">Cap 03</span><span class="chap-title">Estado del Arte en Colectores de Serpentín</span></li>
-                <li><span class="chap-num">Cap 04</span><span class="chap-title">Metodología General de Modelado y Simulación</span></li>
-                <li><span class="chap-num">Cap 05</span><span class="chap-title">Diseño Geométrico Detallado del Serpentín</span></li>
-                <li><span class="chap-num">Cap 06</span><span class="chap-title">Modelado Analítico de Transferencia de Calor</span></li>
-                <li><span class="chap-num">Cap 07</span><span class="chap-title">Simulación Computacional CFD del Flujo y Calor</span></li>
-                <li><span class="chap-num">Cap 8</span><span class="chap-title">Comparación de Herramientas CAD/CAE (CATIA, SOLIDWORKS, Inventor, Solid Edge)</span></li>
-                <li><span class="chap-num">Cap 09</span><span class="chap-title">Resultados, Discusión y Distribuciones de Temperatura</span></li>
-                <li><span class="chap-num">Cap 10</span><span class="chap-title">Conclusiones y Recomendaciones para Futuro Trabajo</span></li>
-            </ul>
+        <!-- Tarjeta Principal: Libro Completo -->
+        <div class="featured-card">
+            <div class="featured-info">
+                <span class="badge-disponibilidad">Estado: Versión Base Compilada</span>
+                <h2>Descargar Libro Completo</h2>
+                <p>Accede a la obra técnica unificada de todos los capítulos compilados, incluyendo el índice analítico de materias, lista de figuras vectoriales, lista de tablas de propiedades y la bibliografía científica global consolidada.</p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="pdf/libro_completo.pdf" class="btn" target="_blank">
+                        📄 Descargar PDF Completo
+                    </a>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>Compilación Automática Integrada</h2>
-            <p>Este libro está configurado para compilarse en servidores remotos mediante integración continua en GitHub Actions ante cada aporte.</p>
-            <a href="https://github.com/gaelrenzo/libro-colector-solar-" class="btn" id="repo_btn">Ver Repositorio en GitHub</a>
+        <h2 class="section-title">Visualización Modular de Capítulos</h2>
+        
+        <!-- Cuadrícula de Capítulos por Partes -->
+        <div class="chapters-grid">
+            
+            <!-- Capítulo 1 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 01</span>
+                        <span class="status-badge status-disponible">Disponible</span>
+                    </div>
+                    <h3>Introducción y Justificación</h3>
+                    <p>Planteamiento del problema de colección solar, justificación del secado de semillas e hipótesis de turbulencia en absorbedores tipo serpentín.</p>
+                </div>
+                <a href="pdf/libro_capitulo_01.pdf" class="btn-sm btn-disponible" target="_blank">Leer Capítulo 1 (PDF)</a>
+            </div>
+
+            <!-- Capítulo 2 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 02</span>
+                        <span class="status-badge status-disponible">Disponible</span>
+                    </div>
+                    <h3>Fundamentos Térmicos y Fluidodinámicos</h3>
+                    <p>Leyes de Fourier, Newton y Stefan-Boltzmann. Vórtices de Dean en serpentines, números adimensionales (Re, Nu) y modelado tridimensional CFD.</p>
+                </div>
+                <a href="pdf/libro_capitulo_02.pdf" class="btn-sm btn-disponible" target="_blank">Leer Capítulo 2 (PDF)</a>
+            </div>
+
+            <!-- Capítulo 3 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 03</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Estado del Arte</h3>
+                    <p>Revisión cronológica de investigaciones sobre rugosidades artificiales, turbulizadores y colectores planos e investigación en agro-secado.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 4 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 04</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Metodología General</h3>
+                    <p>Caso de estudio del colector de chapa de zinc, escenarios operativos de flujo másico y estrategias de modelado CAD y simulación computacional.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 5 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 05</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Diseño Geométrico del Serpentín</h3>
+                    <p>Dimensionamiento geométrico de la cubierta transparente de 5 mm, caja aislante, chapa absorbedora y serpentín en softwares 3D.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 6 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 06</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Modelado de Transferencia de Calor</h3>
+                    <p>Modelado matemático detallado del balance energético del colector y ecuaciones de eficiencia y pérdidas térmicas del sistema.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 7 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 07</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Simulación Computacional CFD</h3>
+                    <p>Configuración del dominio físico del fluido aire, refinamientos de malla, condiciones de contorno y parametrizaciones del solver en ANSYS.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 8 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 08</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Comparación de Softwares CAD/CAE</h3>
+                    <p>Análisis cualitativo y cuantitativo del modelado y simulación en CATIA, SOLIDWORKS, Inventor y Solid Edge.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 9 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 09</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Resultados y Discusión</h3>
+                    <p>Contornos de velocidad del flujo, perfiles vectoriales de temperatura del aire, zonas críticas y contrastación analítica CFD.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
+            <!-- Capítulo 10 -->
+            <div class="chapter-card">
+                <div>
+                    <div class="chapter-header">
+                        <span class="chapter-num">CAP 10</span>
+                        <span class="status-badge status-proceso">En Redacción</span>
+                    </div>
+                    <h3>Conclusiones y Recomendaciones</h3>
+                    <p>Conclusiones del análisis fluido-térmico, recomendación del mejor software comercial y líneas de optimización de serpentines.</p>
+                </div>
+                <a href="#" class="btn-sm btn-bloqueado">Borrador</a>
+            </div>
+
         </div>
+
+        <!-- Sección de DevOps y GitHub Pages -->
+        <div class="team-section">
+            <h2>Integración Continua y Despliegue Colaborativo</h2>
+            <p>La compilación del libro y la actualización de esta página web se coordinan automáticamente en la nube. Sigue esta guía para contribuir con tu equipo:</p>
+            
+            <div class="team-grid">
+                <div class="team-card">
+                    <h4>1. Descargar Últimos Aportes</h4>
+                    <p>Mantén tu repositorio actualizado con el trabajo de tus compañeros:</p>
+                    <code>git pull origin main</code>
+                </div>
+                <div class="team-card">
+                    <h4>2. Compilar tu Capítulo Aislado</h4>
+                    <p>Genera en segundos el PDF del capítulo específico en el que trabajas (ej. Cap. 2):</p>
+                    <code>python scripts/build.py --chapter 2</code>
+                </div>
+                <div class="team-card">
+                    <h4>3. Subir Avances a GitHub</h4>
+                    <p>Guarda y publica tus oraciones editadas (regla de una oración por línea):</p>
+                    <code>git add .<br>git commit -m "Aporta texto en Cap 2"<br>git push origin rama-cap2</code>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Semillero de Investigación en Energías Renovables. Diseñado como un Sistema Editorial Técnico Modular.</p>
+        <p>&copy; 2026 Semillero de Investigación en Energías Renovables. Todos los derechos reservados.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.8rem; color: #475569;">Diseñado como un Ecosistema de Ingeniería Editorial Modular Profesional con control de versiones integrado.</p>
     </footer>
 </body>
 </html>

@@ -87,9 +87,20 @@ def compile_book(chapter=None, engine="pdflatex"):
     src_pdf = os.path.join(temp_dir, "main.pdf")
     if os.path.exists(src_pdf):
         dest_filename = f"libro_completo.pdf" if chapter is None else f"libro_capitulo_{chapter:02d}.pdf"
+        
+        # Copiar a output/pdf/
         dest_pdf = os.path.join(pdf_out_dir, dest_filename)
         shutil.copy(src_pdf, dest_pdf)
-        print(f"[OK] Compilacion terminada con exito! PDF exportado a: {dest_pdf}")
+        
+        # Copiar a docs/pdf/ (para GitHub Pages)
+        docs_pdf_dir = "docs/pdf"
+        os.makedirs(docs_pdf_dir, exist_ok=True)
+        dest_docs_pdf = os.path.join(docs_pdf_dir, dest_filename)
+        shutil.copy(src_pdf, dest_docs_pdf)
+        
+        print(f"[OK] Compilacion terminada con exito! PDF exportado a:")
+        print(f"  - Local: {dest_pdf}")
+        print(f"  - Web (Pages): {dest_docs_pdf}")
         return True
     else:
         print("Error: No se generó el PDF de salida en el directorio temporal.")
