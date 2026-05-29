@@ -1,0 +1,56 @@
+% ==========================================
+% ORQUESTADOR PRINCIPAL DEL LIBRO TÉCNICO
+% ==========================================
+\documentclass[12pt,b5paper,twoside,openright]{book}
+
+% Cargar Configuración Modular
+\input{config/packages}
+\input{config/format}
+\input{config/commands}
+\input{config/metadata}
+
+% Control de Compilación Parcial (gestionado por scripts/build.py)
+% \includeonly{chapters/cap01/main}
+
+\begin{document}
+
+% Páginas Preliminares
+\frontmatter
+\input{frontmatter/portada}
+\input{frontmatter/dedicatoria}
+\input{frontmatter/agradecimientos}
+\input{frontmatter/prefacio}
+
+% Índices del Libro
+\tableofcontents
+\listoffigures
+\listoftables
+
+% Cuerpo del Libro
+\mainmatter
+\include{chapters/cap01/main}
+\include{chapters/cap02/main}
+\include{chapters/cap03/main}
+\include{chapters/cap04/main}
+\include{chapters/cap05/main}
+\include{chapters/cap06/main}
+\include{chapters/cap07/main}
+\include{chapters/cap08/main}
+\include{chapters/cap09/main}
+\include{chapters/cap10/main}
+
+% Anexos
+\appendix
+\include{appendices/anexoA}
+\include{appendices/anexoB}
+\include{appendices/anexoC}
+\include{appendices/anexoD}
+\include{appendices/anexoE}
+\include{appendices/anexoF}
+
+% Bibliografía
+\backmatter
+\bibliographystyle{IEEEtran}
+\bibliography{bibliography/global}
+
+\end{document}

@@ -1,0 +1,62 @@
+% ==========================================
+% DISEÑO ESTÉTICO Y MAQUETACIÓN PREMIUM
+% ==========================================
+
+% Definición de Colores de Marca
+\definecolor{DeepNavy}{RGB}{22, 54, 87}       % Azul Editorial Principal
+\definecolor{TealAccent}{RGB}{0, 128, 128}     % Acento Técnico
+\definecolor{DarkCharcoal}{RGB}{44, 44, 44}   % Cuerpo del Texto
+\definecolor{AzureBack}{RGB}{245, 247, 250}    % Fondo de Cajas Info
+\definecolor{OrangeBack}{RGB}{254, 249, 240}   % Fondo de Cajas Alerta
+
+% Aplicar Color al Texto Base
+\color{DarkCharcoal}
+
+% Márgenes Geométricos Áureos
+\geometry{
+    inner=3.0cm,
+    outer=2.5cm,
+    top=3.0cm,
+    bottom=3.0cm,
+    headheight=15pt,
+    includeheadfoot
+}
+
+% Cabeceras y Pies de Página Elegantes (fancyhdr)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\color{DeepNavy}\sffamily\small\leftmark} % Capítulo en páginas pares izquierdas
+\fancyhead[RO]{\color{DeepNavy}\sffamily\small\rightmark} % Sección en páginas impares derechas
+\fancyfoot[LE,RO]{\color{TealAccent}\sffamily\bfseries\thepage} % Número de página
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headwidth}{0.5cm}
+
+% Estilo de Capítulos y Secciones (titlesec)
+\titleformat{\chapter}[display]
+  {\normalfont\Huge\bfseries\sffamily\color{DeepNavy}}
+  {\filleft\color{TealAccent}\fontsize{80}{80}\selectfont\thechapter}
+  {10pt}
+  {\filleft\Huge}
+  [\vspace{10pt}\titlerule\vspace{20pt}]
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries\sffamily\color{DeepNavy}}
+  {\thesection}
+  {1em}
+  {}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\sffamily\color{TealAccent}}
+  {\thesubsection}
+  {1em}
+  {}
+
+% Estilo de Hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=DeepNavy,
+    citecolor=TealAccent,
+    urlcolor=TealAccent,
+    pdfstartview=FitH
+}

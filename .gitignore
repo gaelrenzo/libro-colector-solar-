@@ -1,0 +1,37 @@
+# Temporales de compilación de LaTeX
+*.aux
+*.log
+*.toc
+*.out
+*.lof
+*.lot
+*.bbl
+*.blg
+*.pdfsync
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.idx
+*.ilg
+*.ind
+
+# Temporales de compiladores específicos
+output/temp/*
+!output/temp/.gitkeep
+
+# Exclusiones de Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# IDEs y Editores
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini

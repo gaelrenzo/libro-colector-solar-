@@ -1,0 +1,48 @@
+% ==========================================
+% DEFINICIÓN DE MACROS Y COMANDOS DE INGENIERÍA
+% ==========================================
+
+% Constantes Termodinámicas Comunes
+\newcommand{\cp}{\ensuremath{C_p}} % Calor específico a presión constante
+\newcommand{\Nu}{\ensuremath{\text{Nu}}} % Número de Nusselt
+\newcommand{\ReNum}{\ensuremath{\text{Re}}} % Número de Reynolds
+\newcommand{\PrNum}{\ensuremath{\text{Pr}}} % Número de Prandtl
+
+% Símbolos de Flujo y Calor
+\newcommand{\qflux}{\ensuremath{q''}} % Flujo de calor por unidad de área (W/m2)
+\newcommand{\mdot}{\ensuremath{\dot{m}}} % Flujo másico (kg/s)
+\newcommand{\Tin}{\ensuremath{T_{\text{in}}}} % Temperatura de entrada
+\newcommand{\Tout}{\ensuremath{T_{\text{out}}}} % Temperatura de salida
+\newcommand{\Tamb}{\ensuremath{T_{\text{amb}}}} % Temperatura ambiente
+
+% Unidades y Formatos Físicos
+\newcommand{\unitW}{\ensuremath{\text{W}}}
+\newcommand{\unitMsq}{\ensuremath{\text{m}^2}}
+\newcommand{\unitC}{\ensuremath{^\circ\text{C}}}
+
+% Definición de Cajas de Ingeniería Premium
+\newtcolorbox{cajainfo}[1]{%
+    colback=AzureBack,
+    colframe=DeepNavy,
+    fonttitle=\bfseries\sffamily,
+    title=#1,
+    boxrule=1pt,
+    arc=3pt,
+    left=10pt,
+    right=10pt,
+    top=8pt,
+    bottom=8pt
+}
+
+\newtcolorbox{cajaadvertencia}[1]{%
+    colback=OrangeBack,
+    colframe=TealAccent,
+    fonttitle=\bfseries\sffamily,
+    title=#1,
+    boxrule=1pt,
+    arc=3pt,
+    left=10pt,
+    right=10pt,
+    top=8pt,
+    bottom=8pt
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín</title>
+    <style>
+        :root {
+            --deep-navy: #163657;
+            --teal-accent: #008080;
+            --dark-charcoal: #1e1e1e;
+            --light-gray: #f5f7fa;
+            --text-light: #ffffff;
+            --text-dark: #2c2c2c;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark-charcoal);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--deep-navy) 0%, #0c2035 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid var(--teal-accent);
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: #b0c4de;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .card {
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            border-left: 5px solid var(--teal-accent);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: var(--teal-accent);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #3a3a3a;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        .chap-num {
+            background-color: var(--deep-navy);
+            color: var(--text-light);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-right: 1rem;
+        }
+
+        .chap-title {
+            flex-grow: 1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--teal-accent);
+            color: var(--text-light);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .btn:hover {
+            background-color: #006666;
+            box-shadow: 0 5px 15px rgba(0, 128, 128, 0.4);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: #777;
+            font-size: 0.9rem;
+            background-color: #1a1a1a;
+            margin-top: 5rem;
+            border-top: 1px solid #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín</h1>
+        <p>Un sistema editorial técnico profesional, modular y automatizado con control de versiones integrado.</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>Estructura del Libro Técnico</h2>
+            <ul>
+                <li><span class="chap-num">Cap 01</span><span class="chap-title">Introducción y Objetivos</span></li>
+                <li><span class="chap-num">Cap 02</span><span class="chap-title">Fundamentos de Transferencia de Calor y Dinámica de Fluidos</span></li>
+                <li><span class="chap-num">Cap 03</span><span class="chap-title">Estado del Arte en Colectores de Serpentín</span></li>
+                <li><span class="chap-num">Cap 04</span><span class="chap-title">Metodología General de Modelado y Simulación</span></li>
+                <li><span class="chap-num">Cap 05</span><span class="chap-title">Diseño Geométrico Detallado del Serpentín</span></li>
+                <li><span class="chap-num">Cap 06</span><span class="chap-title">Modelado Analítico de Transferencia de Calor</span></li>
+                <li><span class="chap-num">Cap 07</span><span class="chap-title">Simulación Computacional CFD del Flujo y Calor</span></li>
+                <li><span class="chap-num">Cap 8</span><span class="chap-title">Comparación de Herramientas CAD/CAE (CATIA, SOLIDWORKS, Inventor, Solid Edge)</span></li>
+                <li><span class="chap-num">Cap 09</span><span class="chap-title">Resultados, Discusión y Distribuciones de Temperatura</span></li>
+                <li><span class="chap-num">Cap 10</span><span class="chap-title">Conclusiones y Recomendaciones para Futuro Trabajo</span></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Compilación Automática Integrada</h2>
+            <p>Este libro está configurado para compilarse en servidores remotos mediante integración continua en GitHub Actions ante cada aporte.</p>
+            <a href="https://github.com" class="btn" id="repo_btn">Ver Repositorio en GitHub</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Semillero de Investigación en Energías Renovables. Diseñado como un Sistema Editorial Técnico Modular.</p>
+    </footer>
+</body>
+</html>
