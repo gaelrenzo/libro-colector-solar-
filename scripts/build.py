@@ -44,12 +44,12 @@ def compile_book(chapter=None, engine="pdflatex"):
         chap_path = f"chapters/cap{chapter:02d}/main"
         include_only_line = f"\\includeonly{{{chap_path}}}"
         # Activar el includeonly en el archivo main.tex
-        new_content = re.sub(r"% \\includeonly\{.*\}", include_only_line, content)
-        new_content = re.sub(r"\\includeonly\{.*\}", include_only_line, new_content)
+        new_content = re.sub(r"% \\includeonly\{.*\}", include_only_line.replace("\\", "\\\\"), content)
+        new_content = re.sub(r"\\includeonly\{.*\}", include_only_line.replace("\\", "\\\\"), new_content)
         print(f"Configurando compilación selectiva para el Capítulo {chapter:02d}...")
     else:
         # Desactivar includeonly
-        new_content = re.sub(r"\\includeonly\{.*\}", f"% \\includeonly{{chapters/cap01/main}}", content)
+        new_content = re.sub(r"\\includeonly\{.*\}", f"% \\\\includeonly{{chapters/cap01/main}}", content)
         print("Configurando compilación de libro completo...")
         
     with open(main_tex, "w", encoding="utf-8") as f:
