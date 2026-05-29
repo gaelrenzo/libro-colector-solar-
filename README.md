@@ -1,7 +1,7 @@
 # 📚 Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín
 ### *Sistema Editorial Técnico, Modular y Automatizado en LaTeX*
 
-[![Build LaTeX Document](https://github.com/gaelrenzo/libro-colector-solar/actions/workflows/build.yml/badge.svg)](https://github.com/gaelrenzo/libro-colector-solar/actions/workflows/build.yml)
+[![Build LaTeX Document](https://github.com/gaelrenzo/libro-colector-solar-/actions/workflows/build.yml/badge.svg)](https://github.com/gaelrenzo/libro-colector-solar-/actions/workflows/build.yml)
 [![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=flat&logo=latex&logoColor=white)](http://www.latex-project.org/)
 [![Python](https://img.shields.io/badge/python-3.11-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -67,8 +67,8 @@ Cada miembro del equipo debe contar con:
 ### 2. Primeros Pasos: Descarga y Preparación
 Clona el repositorio en tu computadora local:
 ```bash
-git clone https://github.com/gaelrenzo/libro-colector-solar.git
-cd libro-colector-solar
+git clone https://github.com/gaelrenzo/libro-colector-solar-.git
+cd libro-colector-solar-
 ```
 
 ### 3. Flujo de Trabajo Seguro (Control de Versiones)
