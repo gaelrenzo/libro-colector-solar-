@@ -1,90 +1,118 @@
-# 📚 Sistema Editorial Técnico Modular - Colector Solar de Aire
+# 📚 Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín
+### *Sistema Editorial Técnico, Modular y Automatizado en LaTeX*
 
-Este repositorio alberga la estructura editorial modular profesional para el desarrollo colaborativo del libro técnico:
+[![Build LaTeX Document](https://github.com/gaelrenzo/libro-colector-solar/actions/workflows/build.yml/badge.svg)](https://github.com/gaelrenzo/libro-colector-solar/actions/workflows/build.yml)
+[![LaTeX](https://img.shields.io/badge/latex-%23008080.svg?style=flat&logo=latex&logoColor=white)](http://www.latex-project.org/)
+[![Python](https://img.shields.io/badge/python-3.11-blue.svg?style=flat&logo=python&logoColor=white)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**"Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín: Análisis Computacional CFD y Comparación CAD/CAE"**
+Este repositorio contiene el sistema editorial técnico y modular profesional para el desarrollo colaborativo, control de versiones e integración continua de la obra de investigación:
 
----
-
-## 🏗️ Filosofía de Arquitectura Modular
-
-El proyecto está diseñado bajo estándares editoriales de ingeniería modernos:
-1. **Un Archivo = Una Responsabilidad**: La configuración está separada de los contenidos. Cada capítulo tiene su propio orquestador (`main.tex`) y carpeta `sections/` donde cada tema es un archivo aislado.
-2. **Regla "One Sentence per Line"**: Cada oración del texto está escrita en una línea independiente de LaTeX. Esto optimiza radicalmente el historial de Git, permitiendo ver aportaciones y corregir erratas exactas sin tocar el resto del párrafo y evitando conflictos de fusión al fusionar ramas de otros compañeros.
-3. **Compilación Parcial**: Los scripts de Python permiten compilar únicamente un capítulo en el que estés trabajando para evitar demoras innecesarias al re-compilar un libro masivo.
+> **"Diseño Termo-Fluidodinámico de Colectores Solares de Aire con Serpentín: Análisis Computacional CFD y Comparación CAD/CAE"**
 
 ---
 
-## 👥 Guía de Colaboración para el Equipo de Trabajo
+## 🏗️ Filosofía de la Arquitectura Editorial
 
-Esta sección detalla los pasos exactos para trabajar en conjunto con tus compañeros sin romper el proyecto.
+A diferencia de los proyectos de LaTeX tradicionales que acumulan miles de líneas en un único archivo inmanejable, este libro implementa una **arquitectura modular de grado editorial**:
 
-### 1. Preparación del Entorno
-Cada miembro del equipo debe instalar:
-- **Distribución LaTeX**: [MiKTeX](https://miktex.org/) (Windows) o TeX Live (Mac/Linux).
-- **Python 3.x** (para los scripts de automatización).
-- **Git** (y opcionalmente [GitHub Desktop](https://desktop.github.com/) para gestión visual).
-- **VS Code** con la extensión **LaTeX Workshop** instalada.
+1. **Responsabilidad Única por Módulo**: Las configuraciones de diseño (`config/`), las páginas preliminares (`frontmatter/`), los anexos (`appendices/`) y cada uno de los 10 capítulos están aislados físicamente.
+2. **Regla de Oro: "One Sentence per Line"**: Cada oración del texto está escrita en una línea independiente de LaTeX. Esto optimiza radicalmente el historial de Git, permitiendo ver aportaciones y corregir erratas exactas sin tocar el resto del párrafo y evitando conflictos de fusión al fusionar ramas de otros compañeros.
+3. **Compilación Selectiva e Inteligente**: A través de scripts de Python, los miembros del equipo pueden compilar un único capítulo en el que estén trabajando de manera instantánea, sin tener que esperar la renderización de todo el libro de cientos de páginas.
 
-### 2. Clonación y Conexión al Repositorio
-Para descargar el proyecto a tu ordenador local, abre una terminal (PowerShell o Git Bash) y ejecuta:
-```bash
-git clone <URL_DE_TU_REPOSITORIO_GITHUB>
-cd libro-profesional
+---
+
+## 📂 Mapa de la Estructura de Directorios
+
+```text
+libro-profesional/
+├── main.tex                            # Orquestador del libro completo
+├── config/                             # Núcleo de diseño y estilos LaTeX
+│   ├── packages.tex                    # Paquetes estructurados por categorías
+│   ├── commands.tex                    # Macros termodinámicas (Nu, Re, Cp) y cajas tcolorbox
+│   ├── format.tex                      # Paleta de colores HSL, cabeceras fancyhdr y geometría
+│   └── metadata.tex                    # Título, autor y fecha global
+├── frontmatter/                        # Páginas preliminares estilizadas (portada minimalista, dedicatoria)
+├── chapters/                           # Capítulos del libro (10 módulos individuales)
+│   ├── cap01/ (Introducción)
+│   ├── cap02/ (Fundamentos)
+│   ├── cap03/ (Estado del Arte)
+│   ├── cap04/ (Metodología General)
+│   ├── cap05/ (Diseño Geométrico)
+│   ├── cap06/ (Modelado Térmico)
+│   ├── cap07/ (Simulación CFD)
+│   ├── cap08/ (Comparación de Software CAD/CAE - CATIA, SOLIDWORKS, Inventor, Solid Edge)
+│   ├── cap09/ (Resultados y Discusión)
+│   └── cap10/ (Conclusiones y Recomendaciones)
+├── appendices/                         # Anexos técnicos (A a F)
+├── bibliography/                       # Referencias globales en formato BibTeX
+├── scripts/                            # Herramientas de automatización en Python (build, clean, export)
+├── output/                             # PDFs finales exportados y registros de compilación
+└── .github/workflows/                  # CI/CD: Compilación en la nube ante cada push
 ```
 
-### 3. Crear una Rama de Trabajo (Feature Branch)
-**NUNCA** trabajes directamente sobre la rama `main`. Cada miembro del equipo debe crear su propia rama de trabajo para sus capítulos o secciones asignadas:
+---
+
+## 👥 Guía Técnica de Colaboración (Para el Equipo)
+
+Para mantener la integridad del repositorio y trabajar de manera coordinada con tus compañeros, se establece el siguiente flujo de trabajo:
+
+### 1. Requisitos Previos
+Cada miembro del equipo debe contar con:
+- **LaTeX**: [MiKTeX](https://miktex.org/) (Windows) o TeX Live (Mac/Linux).
+- **Python 3.x** (para los scripts de automatización).
+- **Git** (y opcionalmente [GitHub Desktop](https://desktop.github.com/) para una gestión visual cómoda).
+- **Editor**: VS Code con la extensión **LaTeX Workshop**.
+
+### 2. Primeros Pasos: Descarga y Preparación
+Clona el repositorio en tu computadora local:
 ```bash
-# Asegurarse de tener los últimos cambios
+git clone https://github.com/gaelrenzo/libro-colector-solar.git
+cd libro-colector-solar
+```
+
+### 3. Flujo de Trabajo Seguro (Control de Versiones)
+**NUNCA** realices commits directos sobre la rama `main`. Sigue siempre este flujo:
+```bash
+# 1. Asegúrate de tener la última versión estable
 git checkout main
 git pull
 
-# Crear una nueva rama para tu trabajo
-git checkout -b capitulo-02-fundamentos
-```
+# 2. Crea una rama de trabajo para tu sección o capítulo asignado
+git checkout -b capitulo-05-absorbedor
 
-### 4. Compilar Aisladamente para Acelerar el Flujo
-Si solo estás trabajando en el Capítulo 2, no necesitas compilar todo el libro. Puedes compilar únicamente tu capítulo con el script de automatización en Python:
-```bash
-python scripts/build.py --chapter 2
-```
-Esto modificará el orquestador principal temporalmente, compilará únicamente el Capítulo 2 y colocará el PDF resultante en `output/pdf/libro_capitulo_02.pdf`.
+# 3. Trabaja en tus archivos .tex locales (escribe una frase por línea)
+# ... realiza tus ediciones ...
 
-Si deseas compilar el **libro completo**:
-```bash
-python scripts/build.py
-```
-Y se generará el archivo final `output/pdf/libro_completo.pdf` con todos los capítulos e índices consolidados.
+# 4. Verifica tus aportes compilando tu capítulo de forma local
+python scripts/build.py --chapter 5
 
-### 5. Sincronización e Integración Continua (GitHub Actions)
-Cuando termines de redactar tus oraciones:
-1. Haz commit de tus cambios locales:
-   ```bash
-   git add .
-   git commit -m "Añade secciones 2.1 y 2.2 de fundamentos térmicos"
-   ```
-2. Sube la rama a GitHub:
-   ```bash
-   git push -u origin capitulo-02-fundamentos
-   ```
-3. Ve a GitHub y abre un **Pull Request (PR)** hacia la rama `main`.
-4. El servidor de integración continua **GitHub Actions** compilará automáticamente el libro en la nube. Si no hay errores de sintaxis o referencias rotas, la compilación de la nube saldrá en verde y tus compañeros podrán revisar e integrar tu trabajo con seguridad.
+# 5. Guarda tus avances en tu rama local
+git add .
+git commit -m "Añade modelo matemático del absorbedor y dimensiones base"
 
-### 6. Limpieza de Temporales
-Para eliminar los molestos archivos intermedios de LaTeX que genera la compilación local, ejecuta en cualquier momento:
-```bash
-python scripts/clean.py
+# 6. Sube tus cambios a GitHub
+git push -u origin capitulo-05-absorbedor
 ```
-Esto dejará la raíz del proyecto limpia y libre de ruido.
+Una vez subida la rama, abre un **Pull Request (PR)** en GitHub para que el equipo pueda ver tus cambios y fusionarlos a `main` tras la aprobación de la integración continua.
 
 ---
 
-## 🛠️ Estructura del Directorio
-- `config/`: Archivos de configuración modular (`packages.tex`, `commands.tex`, `format.tex`, `metadata.tex`).
-- `frontmatter/`: Páginas preliminares (portada, dedicatoria, agradecimientos, prefacio).
-- `chapters/`: Contenidos técnicos separados por capítulos (Capítulo 1 al 10).
-- `appendices/`: Anexos adicionales (Tablas, parámetros y planos).
-- `bibliography/`: Base de datos de citas bibliográficas en formato BibTeX.
-- `scripts/`: Scripts en Python para compilación y mantenimiento.
-- `output/`: Directorio donde se exportan los PDFs construidos.
+## 💻 Panel de Comandos de Automatización
+
+En la raíz del proyecto, puedes ejecutar estos comandos en consola para simplificar el flujo editorial:
+
+| Comando | Acción | Descripción |
+| :--- | :--- | :--- |
+| `python scripts/build.py` | **Compilar el libro completo** | Compila todo el documento, consolida el índice analítico, lista de figuras, de tablas y bibliografía global. Genera `output/pdf/libro_completo.pdf`. |
+| `python scripts/build.py --chapter X` | **Compilación parcial selectiva** | Compila en segundos **únicamente el Capítulo X** (ej. `--chapter 5`). Mantiene la numeración real y genera `output/pdf/libro_capitulo_05.pdf`. |
+| `python scripts/clean.py` | **Limpieza profunda** | Elimina recursivamente todas las extensiones auxiliares y molestas de LaTeX (`.aux`, `.log`, `.toc`, etc.) para dejar tu carpeta limpia. |
+| `python scripts/export.py` | **Exportación histórica** | Copia el PDF completo y lo renombra con la fecha y hora exacta en `output/pdf/` para guardar un control de versiones de entregas. |
+
+---
+
+## 🚀 Integración Continua (DevOps)
+
+El proyecto cuenta con **GitHub Actions** preconfigurado:
+* **Compilación en la Nube (`build.yml`)**: Cada vez que se crea un Pull Request o se hace un push a la rama `main`, un contenedor Linux con LaTeX compila el documento completo para confirmar que compila al 100% y sin errores de sintaxis o referencias rotas.
+* **Publicación de Versiones (`release.yml`)**: Al etiquetar un commit estable (ej. `v1.0`), GitHub generará de forma automática una entrega (Release) adjuntando el PDF final del libro listo para su descarga y distribución.
